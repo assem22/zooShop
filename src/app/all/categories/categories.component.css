@@ -1,11 +1,5 @@
-.md-pills .nav-link.active {
-  color: #fff;
-  background-color: #616161;
-}
-button.close {
-  position: absolute;
-  right: 0;
-  z-index: 2;
-  padding-right: 1rem;
-  padding-top: .6rem;
+
+.intro-2 {
+  background: url("src/assets/images/homepage.jpg")no-repeat center center;
+  background-size: cover;
 }
