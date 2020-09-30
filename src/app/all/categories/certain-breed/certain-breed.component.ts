@@ -17,6 +17,7 @@ import {
   templateUrl: './certain-breed.component.html',
   styleUrls: ['./certain-breed.component.css']
 })
+// tslint:disable-next-line:max-line-length
 export class CertainBreedComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, OnDestroy, AfterViewChecked{
   @Input() searchText: string;
   @Output() showChild: EventEmitter<boolean> = new EventEmitter();
