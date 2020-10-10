@@ -4,7 +4,6 @@ import {
   AfterViewChecked,
   AfterViewInit,
   Component,
-  DoCheck,
   OnChanges,
   OnDestroy,
   OnInit
@@ -17,7 +16,7 @@ import {Breed} from '../model/breed';
   styleUrls: ['./categories.component.css']
 })
 // tslint:disable-next-line:max-line-length
-export class CategoriesComponent implements OnInit, OnChanges, DoCheck,
+export class CategoriesComponent implements OnInit, OnChanges,
   AfterContentInit, AfterContentChecked, AfterViewInit, OnDestroy, AfterViewChecked {
 
   pet: Breed;
@@ -29,8 +28,6 @@ export class CategoriesComponent implements OnInit, OnChanges, DoCheck,
   ngOnChanges() { console.log('CategoryComponent:OnChanges'); }
   // tslint:disable-next-line:typedef
   ngOnInit() { console.log('CategoryComponent:OnInit'); }
-  // tslint:disable-next-line:typedef
-  ngDoCheck() { console.log('CategoryComponent:DoCheck'); }
   // tslint:disable-next-line:typedef
   ngAfterContentInit() { console.log('CategoryComponent:AfterContentInit'); }
   // tslint:disable-next-line:typedef

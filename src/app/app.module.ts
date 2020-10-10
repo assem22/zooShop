@@ -23,7 +23,7 @@ import {BasketComponent} from './all/basket/basket.component';
     RegisterComponent,
     LoginComponent,
     OrderComponent,
-    BasketComponent
+    BasketComponent,
   ],
   imports: [
     BrowserModule,

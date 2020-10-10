@@ -6,15 +6,15 @@ import { BreedComponent } from './breed/breed.component';
 import { CertainBreedComponent } from './certain-breed/certain-breed.component';
 import {Ng2SearchPipeModule} from 'ng2-search-filter';
 import {FormsModule} from '@angular/forms';
-
+import {SummaryPipe} from '../../summary.pipe';
 
 @NgModule({
-  declarations: [CategoriesComponent, BreedComponent, CertainBreedComponent],
+  declarations: [CategoriesComponent, BreedComponent, CertainBreedComponent, SummaryPipe],
   imports: [
     CommonModule,
     CategoriesRoutingModule,
     Ng2SearchPipeModule,
-    FormsModule
+    FormsModule,
   ]
 })
 export class CategoriesModule { }
