@@ -11,7 +11,6 @@ import {RegisterComponent} from './all/register/register.component';
 import {LoginComponent} from './all/login/login.component';
 import {OrderComponent} from './all/order/order.component';
 import {BasketComponent} from './all/basket/basket.component';
-import {LightboxModule} from 'ngx-lightbox';
 
 @NgModule({
   declarations: [
@@ -28,7 +27,6 @@ import {LightboxModule} from 'ngx-lightbox';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LightboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,5 +11,4 @@ export class BasketComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
