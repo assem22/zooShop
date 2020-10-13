@@ -41,9 +41,4 @@ export class BreedComponent implements OnInit, OnChanges, AfterContentChecked, D
     this.clickedBreed = id;
   }
 
-  // tslint:disable-next-line:typedef
-  setClickedBreed(id: number){
-    this.clickedBreed = id;
-  }
-
 }

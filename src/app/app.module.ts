@@ -6,12 +6,12 @@ import { AppComponent } from './app.component';
 import {HomeComponent} from './all/home/home.component';
 import {NavbarComponent} from './static/navbar/navbar.component';
 import {FooterComponent} from './static/footer/footer.component';
-import {CategoriesModule} from './all/categories/categories.module';
 import {PetDetailComponent} from './all/pet-detail/pet-detail.component';
 import {RegisterComponent} from './all/register/register.component';
 import {LoginComponent} from './all/login/login.component';
 import {OrderComponent} from './all/order/order.component';
 import {BasketComponent} from './all/basket/basket.component';
+import {LightboxModule} from 'ngx-lightbox';
 
 @NgModule({
   declarations: [
@@ -28,6 +28,7 @@ import {BasketComponent} from './all/basket/basket.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    LightboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
