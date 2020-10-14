@@ -1,4 +1,15 @@
-import {Component, Input, OnInit, OnChanges, AfterContentChecked, DoCheck} from '@angular/core';
+import {
+  Component,
+  Input,
+  OnInit,
+  OnChanges,
+  AfterContentChecked,
+  DoCheck,
+  AfterContentInit,
+  AfterViewInit,
+  OnDestroy,
+  AfterViewChecked
+} from '@angular/core';
 import {Breed} from '../../model/breed';
 import {Router} from '@angular/router';
 
@@ -8,7 +19,7 @@ import {Router} from '@angular/router';
   templateUrl: './breed.component.html',
   styleUrls: ['./breed.component.css']
 })
-export class BreedComponent implements OnInit, OnChanges, AfterContentChecked, DoCheck {
+export class BreedComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, OnDestroy, AfterViewChecked {
   @Input() searchText: string;
   clickedBreed: number;
   listOfBreed: Breed[] = [
@@ -27,12 +38,23 @@ export class BreedComponent implements OnInit, OnChanges, AfterContentChecked, D
   // tslint:disable-next-line:typedef
   ngOnChanges() { console.log('ParentComponent:OnChanges'); }
   // tslint:disable-next-line:typedef
+  ngOnInit() { console.log('ParentComponent:OnInit'); }
+  // tslint:disable-next-line:typedef
   ngDoCheck() { console.log('ParentComponent:DoCheck'); }
   // tslint:disable-next-line:typedef
+  ngAfterContentInit() { console.log('ParentComponent:AfterContentInit'); }
+  // tslint:disable-next-line:typedef
   ngAfterContentChecked() { console.log('ParentComponent:AfterContentChecked'); }
+  // tslint:disable-next-line:typedef use-lifecycle-interface
+  ngAfterViewInit() { console.log('ParentComponent:AfterViewInit'); }
 
-  ngOnInit(): void {
-  }
+  // tslint:disable-next-line:typedef use-lifecycle-interface
+  ngAfterViewChecked() { console.log('ParentComponent:AfterViewChecked'); }
+
+  // tslint:disable-next-line:typedef use-lifecycle-interface
+  ngOnDestroy() { console.log('ParentComponent:OnDestroy'); }
+
+
 
   // tslint:disable-next-line:typedef
   showCertainBreeds(item: boolean, id: number){
