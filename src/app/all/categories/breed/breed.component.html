@@ -48,4 +48,7 @@
 
 </div>
 
-<app-certain-breed *ngIf="showChild" (showChild)="showCertainBreeds($event, 0)" [searchText]="searchText" [num]="clickedBreed"></app-certain-breed>
+<!--<h3>{{breedService.getShowChild}}</h3>-->
+
+<!--<app-certain-breed *ngIf="showChild" (showChild)="showCertainBreeds($event, 0)" [searchText]="searchText" [num]="clickedBreed"></app-certain-breed>-->
+<app-certain-breed *ngIf="showChild"></app-certain-breed>

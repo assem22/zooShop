@@ -1,42 +1,50 @@
 import {
-  AfterContentChecked,
-  AfterContentInit,
-  AfterViewChecked,
-  AfterViewInit,
-  Component,
-  OnChanges,
-  OnDestroy,
+  Component, DoCheck,
   OnInit
 } from '@angular/core';
 import {Breed} from '../model/breed';
+import {BreedService} from '../../services/breed.service';
+import {LoggingService} from '../../services/logging.service';
 
 @Component({
   selector: 'app-categories',
   templateUrl: './categories.component.html',
-  styleUrls: ['./categories.component.css']
+  styleUrls: ['./categories.component.css'],
+  providers: [BreedService, LoggingService]
 })
 // tslint:disable-next-line:max-line-length
-export class CategoriesComponent implements OnInit, OnChanges,
-  AfterContentInit, AfterContentChecked, AfterViewInit, OnDestroy, AfterViewChecked {
+export class CategoriesComponent implements OnInit, DoCheck {
 
+  listOfBreed: Breed[];
   pet: Breed;
   searchText: string;
 
-  constructor() { }
+  constructor(private breedService: BreedService) {
+  }
+
+  // ngOnChanges() {
+  //   console.log('CategoryComponent:OnChanges');
+  // }
 
   // tslint:disable-next-line:typedef
-  ngOnChanges() { console.log('CategoryComponent:OnChanges'); }
+  ngOnInit() {
+    console.log('CategoryComponent:OnInit');
+    this.listOfBreed = this.breedService.getBreeds();
+  }
   // tslint:disable-next-line:typedef
-  ngOnInit() { console.log('CategoryComponent:OnInit'); }
-  // tslint:disable-next-line:typedef
-  ngAfterContentInit() { console.log('CategoryComponent:AfterContentInit'); }
-  // tslint:disable-next-line:typedef
-  ngAfterContentChecked(){console.log('CategoryComponent:AfterContentChecked'); }
-  // tslint:disable-next-line:typedef
-  ngAfterViewInit() { console.log('CategoryComponent:AfterViewInit'); }
-  // tslint:disable-next-line:typedef
-  ngAfterViewChecked() { console.log('CategoryComponent:AfterViewChecked'); }
-  // tslint:disable-next-line:typedef
-  ngOnDestroy() { console.log('CategoryComponent:OnDestroy'); }
+  ngDoCheck() {
+    console.log('CategoryComponent:DoCheck');
+    this.breedService.setSearchText(this.searchText);
+  }
 
+  // ngAfterContentInit() { console.log('CategoryComponent:AfterContentInit'); }
+  // ngAfterContentChecked(){console.log('CategoryComponent:AfterContentChecked'); }
+  // ngAfterViewInit() { console.log('CategoryComponent:AfterViewInit'); }
+  // ngAfterViewChecked() { console.log('CategoryComponent:AfterViewChecked'); }
+  // ngOnDestroy() { console.log('CategoryComponent:OnDestroy'); }
+
+  // tslint:disable-next-line:typedef
+  search(searchText: string) {
+    this.breedService.setSearchText(searchText);
+  }
 }
