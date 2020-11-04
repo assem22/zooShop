@@ -16,12 +16,10 @@ import {BreedService} from '../../../services/breed.service';
 })
 // tslint:disable-next-line:max-line-length
 export class BreedComponent implements OnInit, OnChanges, DoCheck, AfterViewChecked {
-  // @Input() searchText: string;
   searchText: string;
-  clickedBreed: number;
   listOfBreed: Breed[];
 
-  showChild = false;
+  // breedName: string;
 
   constructor(private breedService: BreedService) {
     this.listOfBreed = this.breedService.getBreeds();
@@ -39,42 +37,21 @@ export class BreedComponent implements OnInit, OnChanges, DoCheck, AfterViewChec
   ngDoCheck() {
     console.log('ParentComponent:DoCheck');
     this.searchText = this.breedService.getSearchText();
-    this.breedService.setNum(this.clickedBreed);
-    this.breedService.setShowChild(this.showChild);
-    // this.showChild = this.breedService.getShowChild();
+    // this.breedService.setBreedName(this.breedName);
   }
-
-  // ngAfterContentInit() {
-  //   console.log('ParentComponent:AfterContentInit');
-  // }
-
-  // ngAfterContentChecked() {
-  //   console.log('ParentComponent:AfterContentChecked');
-  // }
-
-  // ngAfterViewInit() {
-  //   console.log('ParentComponent:AfterViewInit');
-  // }
 
   // tslint:disable-next-line:typedef use-lifecycle-interface
   ngAfterViewChecked() {
     console.log('ParentComponent:AfterViewChecked');
-    this.showChild = this.breedService.getShowChild();
+    // this.showChild = this.breedService.getShowChild();
   }
 
-  // ngOnDestroy() {
-  //   console.log('ParentComponent:OnDestroy');
-  //   // this.showChild = this.breedService.getShowChild();
-  // }
 
 
 
   // tslint:disable-next-line:typedef
-  showCertainBreeds(item: boolean, id: number){
-    // this.showChild = !this.showChild;
-
-    this.showChild = item;
-    this.clickedBreed = id;
-  }
+  // setNameOfBreed(name: string){
+  //   this.breedName = name;
+  // }
 
 }

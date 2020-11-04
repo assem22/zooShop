@@ -6,6 +6,8 @@ import {
 } from '@angular/core';
 import {Breed} from '../../model/breed';
 import {BreedService} from '../../../services/breed.service';
+import {ActivatedRoute} from '@angular/router';
+import {Subscription} from 'rxjs';
 
 // tslint:disable-next-line:no-conflicting-lifecycle
 @Component({
@@ -16,10 +18,9 @@ import {BreedService} from '../../../services/breed.service';
 // tslint:disable-next-line:max-line-length
 export class CertainBreedComponent implements OnInit, OnChanges, DoCheck{
   searchText: string;
-  // @Input() num: number;
   num: number;
-  // @Output() showChild: EventEmitter<boolean> = new EventEmitter();
-  showChild = false;
+  private subscription: Subscription;
+  // breedName: string;
 
   listOfBreed1: Breed[];
   listOfBreed2: Breed[];
@@ -28,7 +29,9 @@ export class CertainBreedComponent implements OnInit, OnChanges, DoCheck{
   listOfBreed5: Breed[];
   listOfBreed6: Breed[];
 
-  constructor(private breedService: BreedService) {
+  constructor(private breedService: BreedService, private activateRoute: ActivatedRoute) {
+    this.subscription = activateRoute.params.subscribe(params => this.num = params['id']);
+
     this.listOfBreed1 = this.breedService.getlistOfBreed1();
     this.listOfBreed2 = this.breedService.getlistOfBreed2();
     this.listOfBreed3 = this.breedService.getlistOfBreed3();
@@ -44,38 +47,13 @@ export class CertainBreedComponent implements OnInit, OnChanges, DoCheck{
   // tslint:disable-next-line:typedef
   ngOnInit() {
     console.log('ChildComponent:OnInit');
-    this.breedService.setShowChild(this.showChild);
+    // this.breedService.setShowChild(this.showChild);
   }
   // tslint:disable-next-line:typedef
   ngDoCheck() {
     console.log('ChildComponent:DoCheck');
     this.searchText = this.breedService.getSearchText();
-    this.num = this.breedService.getNum();
-  }
-  //
-  // ngAfterContentInit() {
-  //   console.log('ChildComponent:AfterContentInit');
-  // }
-  //
-  // ngAfterContentChecked(){
-  //   console.log('ChildComponent:AfterContentChecked');
-  // }
-  // // tslint:disable-next-line:typedef
-  // ngAfterViewInit() {
-  //   console.log('ChildComponent:AfterViewInit');
-  // }
-  //
-  // ngAfterViewChecked() {
-  //   console.log('ChildComponent:AfterViewChecked');
-  // }
-  //
-  // ngOnDestroy() {
-  //   console.log('ChildComponent:OnDestroy');
-  // }
-
-
-  // tslint:disable-next-line:typedef
-  hideChild(){
-    this.showChild = false;
+    // this.breedName = this.breedService.getBreedName();
+    // this.num = this.breedService.getNum();
   }
 }

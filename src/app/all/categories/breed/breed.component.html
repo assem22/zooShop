@@ -18,8 +18,8 @@
           <div class="col-md-4" *ngFor="let breed of listOfBreed | filter: searchText">
             <!-- Card -->
 <!--            {{setClickedBreed(breed.id)}}-->
-<!--            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal" routerLink="certain">-->
-              <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal" (click)="showCertainBreeds(true, breed.id)" >
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal" routerLink="pet/{{breed.id}}">
+<!--              <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal" (click)="showCertainBreeds(true, breed.id)" >-->
 
               <!-- Card image -->
               <img class="card-img-top" src="{{breed.image}}" alt="Card image cap">
@@ -51,4 +51,4 @@
 <!--<h3>{{breedService.getShowChild}}</h3>-->
 
 <!--<app-certain-breed *ngIf="showChild" (showChild)="showCertainBreeds($event, 0)" [searchText]="searchText" [num]="clickedBreed"></app-certain-breed>-->
-<app-certain-breed *ngIf="showChild"></app-certain-breed>
+<!--<app-certain-breed *ngIf="showChild"></app-certain-breed>-->

@@ -5,29 +5,21 @@ import {Breed} from '../all/model/breed';
 @Injectable()
 export class BreedService {
   private search: string;
-  private showChild: boolean;
-  private num: number;
+  // private breedName: string;
+  // private showChild: boolean;
+  // private num: number;
 
   constructor(private loggingService: LoggingService) {
   }
 
-  getNum(): number{
-    return this.num;
-  }
-
-  // tslint:disable-next-line:typedef
-  setNum(num: number){
-    this.num = num;
-  }
-
-  getShowChild(): boolean{
-    return this.showChild;
-  }
-
-  // tslint:disable-next-line:adjacent-overload-signatures
-  setShowChild(show: boolean){
-    this.showChild = show;
-  }
+  // getBreedName(): string{
+  //   return  this.breedName;
+  // }
+  //
+  // // tslint:disable-next-line:typedef
+  // setBreedName(name: string){
+  //   this.breedName = name;
+  // }
 
   getSearchText(): string{
     return this.search;
