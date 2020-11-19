@@ -6,7 +6,7 @@ import {
 } from '@angular/core';
 import {Breed} from '../../model/breed';
 import {BreedService} from '../../../services/breed.service';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {Subscription} from 'rxjs';
 
 // tslint:disable-next-line:no-conflicting-lifecycle
@@ -29,7 +29,7 @@ export class CertainBreedComponent implements OnInit, OnChanges, DoCheck{
   listOfBreed5: Breed[];
   listOfBreed6: Breed[];
 
-  constructor(private breedService: BreedService, private activateRoute: ActivatedRoute) {
+  constructor(private breedService: BreedService, private activateRoute: ActivatedRoute, private router: Router) {
     this.subscription = activateRoute.params.subscribe(params => this.num = params['id']);
 
     this.listOfBreed1 = this.breedService.getlistOfBreed1();
@@ -55,5 +55,10 @@ export class CertainBreedComponent implements OnInit, OnChanges, DoCheck{
     this.searchText = this.breedService.getSearchText();
     // this.breedName = this.breedService.getBreedName();
     // this.num = this.breedService.getNum();
+  }
+
+  // tslint:disable-next-line:typedef
+  redirectToDetail(){
+    this.router.navigate(['pet-details']);
   }
 }

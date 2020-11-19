@@ -37,12 +37,6 @@ export class CategoriesComponent implements OnInit, DoCheck {
     this.breedService.setSearchText(this.searchText);
   }
 
-  // ngAfterContentInit() { console.log('CategoryComponent:AfterContentInit'); }
-  // ngAfterContentChecked(){console.log('CategoryComponent:AfterContentChecked'); }
-  // ngAfterViewInit() { console.log('CategoryComponent:AfterViewInit'); }
-  // ngAfterViewChecked() { console.log('CategoryComponent:AfterViewChecked'); }
-  // ngOnDestroy() { console.log('CategoryComponent:OnDestroy'); }
-
   // tslint:disable-next-line:typedef
   search(searchText: string) {
     this.breedService.setSearchText(searchText);

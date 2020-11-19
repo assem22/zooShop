@@ -5,21 +5,9 @@ import {Breed} from '../all/model/breed';
 @Injectable()
 export class BreedService {
   private search: string;
-  // private breedName: string;
-  // private showChild: boolean;
-  // private num: number;
 
   constructor(private loggingService: LoggingService) {
   }
-
-  // getBreedName(): string{
-  //   return  this.breedName;
-  // }
-  //
-  // // tslint:disable-next-line:typedef
-  // setBreedName(name: string){
-  //   this.breedName = name;
-  // }
 
   getSearchText(): string{
     return this.search;
