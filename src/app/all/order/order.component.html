@@ -10,25 +10,43 @@
     <!-- Section description -->
     <h3 class="lead text-center text-white pt-2 mb-5">Deliver to the door!</h3>
 
-    <form class="mb-5 mx-md-5" action="">
+    <form class="mb-5 mx-md-5" [formGroup]="orderForm" (ngSubmit)="save()">
 
       <div class="row">
         <div class="col-md-4 mb-4">
 
           <!-- Name -->
-          <input type="text" id="name" class="form-control" placeholder="Name">
+          <input [class.is-invalid] = "orderForm.get('name').invalid && orderForm.get('name').touched"
+                 type="name" class="form-control" formControlName="name" placeholder="Name"/>
+          <div *ngIf="(name.invalid && name.touched) || name.dirty">
+            <small *ngIf="name.errors?.required" class="text-danger">Name is required</small>
+          </div>
 
         </div>
         <div class="col-md-4 mb-4">
 
           <!-- Email -->
-          <input type="email" id="email" class="form-control" placeholder="Email">
+          <input [class.is-invalid] = "orderForm.get('email').invalid && orderForm.get('email').touched"
+                 type="email" class="form-control" formControlName="email" placeholder="Email"/>
+          <div *ngIf="(email.invalid && email.touched) || email.dirty">
+            <small *ngIf="email.errors?.required" class="text-danger">Email is required</small>
+            <!--question mark(?) is a safe navigation operator-->
+            <small *ngIf="email.errors?.pattern" class="text-danger">Please provide a valid email address</small>
+          </div>
 
         </div>
         <div class="col-md-4 mb-4">
 
           <!-- Phone -->
-          <input type="text" id="phone" class="form-control" placeholder="Phone">
+<!--          <input type="text" id="phone" class="form-control" placeholder="Phone"-->
+<!--                 name="phone" formControlName="phone">-->
+          <input [class.is-invalid] = "orderForm.get('phone').invalid && orderForm.get('phone').touched"
+                 type="text" class="form-control" formControlName="phone" placeholder="Phone"/>
+          <div *ngIf="(phone.invalid && phone.touched) || phone.dirty">
+            <small *ngIf="phone.errors?.required" class="text-danger">phone is required</small>
+            <!--question mark(?) is a safe navigation operator-->
+            <small *ngIf="phone.errors?.minLength" class="text-danger">Please provide a valid phone number</small>
+          </div>
 
         </div>
       </div>
@@ -37,7 +55,13 @@
         <div class="col-md-12 mb-4">
 
           <!-- Subject -->
-          <input type="text" id="subject" class="form-control" placeholder="Address">
+<!--          <input type="text" id="subject" class="form-control" placeholder="Address"-->
+<!--                 name="address" formControlName="address">-->
+          <input [class.is-invalid] = "orderForm.get('address').invalid && orderForm.get('address').touched"
+                 type="text" class="form-control" formControlName="address" placeholder="Address"/>
+          <div *ngIf="(address.invalid && address.touched) || address.dirty">
+            <small *ngIf="address.errors?.required" class="text-danger">Address is required</small>
+          </div>
 
         </div>
       </div>
@@ -46,11 +70,12 @@
         <div class="col-md-12">
 
           <div class="form-group mb-4">
-            <textarea class="form-control rounded" id="message" rows="3" placeholder="Comments"></textarea>
+            <textarea class="form-control rounded" id="message" rows="3" placeholder="Comments"
+                      name="comment" formControlName="comment"></textarea>
           </div>
 
           <div class="text-center">
-            <button type="submit" class="btn btn-elegant" (click)="save()">Submit</button>
+            <button type="submit" class="btn btn-elegant" [disabled]="!orderForm.valid">Submit</button>
           </div>
 
         </div>

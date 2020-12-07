@@ -1,4 +1,7 @@
-<app-navbar></app-navbar>
+<app-navbar *ngIf="isLoggedIn(); else elseBlock"></app-navbar>
+<ng-template #elseBlock>
+  <app-home-navbar></app-home-navbar>
+</ng-template>
 <router-outlet></router-outlet>
 <app-footer></app-footer>
 

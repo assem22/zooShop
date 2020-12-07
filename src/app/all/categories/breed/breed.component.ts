@@ -7,6 +7,8 @@ import {
 } from '@angular/core';
 import {Breed} from '../../model/breed';
 import {BreedService} from '../../../services/breed.service';
+import {AuthService} from '../../../services/auth.service';
+import {User} from '../../model/user';
 
 // tslint:disable-next-line:no-conflicting-lifecycle
 @Component({
@@ -18,11 +20,10 @@ import {BreedService} from '../../../services/breed.service';
 export class BreedComponent implements OnInit, OnChanges, DoCheck, AfterViewChecked {
   searchText: string;
   listOfBreed: Breed[];
+  user: User;
 
-  // breedName: string;
-
-  constructor(private breedService: BreedService) {
-    this.listOfBreed = this.breedService.getBreeds();
+  constructor(private breedService: BreedService, private accountService: AuthService) {
+    this.user = this.accountService.userValue;
   }
 
   // tslint:disable-next-line:typedef
@@ -32,26 +33,24 @@ export class BreedComponent implements OnInit, OnChanges, DoCheck, AfterViewChec
   // tslint:disable-next-line:typedef
   ngOnInit() {
     console.log('ParentComponent:OnInit');
+    this.getUserList();
+  }
+
+  // tslint:disable-next-line:typedef
+  getUserList() {
+    this.breedService.getBreeds().subscribe(res => {
+      this.listOfBreed = res;
+    });
   }
   // tslint:disable-next-line:typedef
   ngDoCheck() {
     console.log('ParentComponent:DoCheck');
     this.searchText = this.breedService.getSearchText();
-    // this.breedService.setBreedName(this.breedName);
   }
 
   // tslint:disable-next-line:typedef use-lifecycle-interface
   ngAfterViewChecked() {
     console.log('ParentComponent:AfterViewChecked');
-    // this.showChild = this.breedService.getShowChild();
   }
-
-
-
-
-  // tslint:disable-next-line:typedef
-  // setNameOfBreed(name: string){
-  //   this.breedName = name;
-  // }
 
 }

@@ -5,6 +5,8 @@ import {
 import {Breed} from '../model/breed';
 import {BreedService} from '../../services/breed.service';
 import {LoggingService} from '../../services/logging.service';
+import {User} from '../model/user';
+import {AuthService} from '../../services/auth.service';
 
 @Component({
   selector: 'app-categories',
@@ -18,8 +20,10 @@ export class CategoriesComponent implements OnInit, DoCheck {
   listOfBreed: Breed[];
   pet: Breed;
   searchText: string;
+  user: User;
 
-  constructor(private breedService: BreedService) {
+  constructor(private breedService: BreedService, private accountService: AuthService) {
+    this.user = this.accountService.userValue;
   }
 
   // ngOnChanges() {
@@ -29,7 +33,13 @@ export class CategoriesComponent implements OnInit, DoCheck {
   // tslint:disable-next-line:typedef
   ngOnInit() {
     console.log('CategoryComponent:OnInit');
-    this.listOfBreed = this.breedService.getBreeds();
+    this.getUserList();
+  }
+  // tslint:disable-next-line:typedef
+  getUserList() {
+    this.breedService.getBreeds().subscribe(res => {
+      this.listOfBreed = res;
+    });
   }
   // tslint:disable-next-line:typedef
   ngDoCheck() {

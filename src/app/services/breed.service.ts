@@ -1,12 +1,16 @@
 import {Injectable} from '@angular/core';
 import {LoggingService} from './logging.service';
 import {Breed} from '../all/model/breed';
+import {Observable} from 'rxjs';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable()
 export class BreedService {
+  apiurl = 'http://localhost:3000/';
+
   private search: string;
 
-  constructor(private loggingService: LoggingService) {
+  constructor(private loggingService: LoggingService, private http: HttpClient) {
   }
 
   getSearchText(): string{
@@ -16,111 +20,52 @@ export class BreedService {
   setSearchText(searchText: string){
     this.search = searchText;
   }
-  // tslint:disable-next-line:typedef
- getBreeds(){
-    let breeds: Breed[];
-    breeds = [
-      new Breed(1, 'Breed of pet 1', 'https://mdbootstrap.com/img/Photos/Others/img3.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-      new Breed(2, 'Breed of pet 2', 'https://mdbootstrap.com/img/Photos/Others/img9.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-      new Breed(3, 'Breed of pet 3', 'https://mdbootstrap.com/img/Photos/Others/img4.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-      new Breed(4, 'Breed of pet 4', 'https://mdbootstrap.com/img/Photos/Others/img5.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-      new Breed(5, 'Breed of pet 5', 'https://mdbootstrap.com/img/Photos/Others/img10.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-      new Breed(6, 'Breed of pet 6', 'https://mdbootstrap.com/img/Photos/Others/img8.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.')
-    ];
 
-    this.loggingService.log('List of breeds: ' + breeds);
-
-    return breeds;
- }
-
-  // tslint:disable-next-line:typedef
- getlistOfBreed1() {
-   let listOfBreed1: Breed[];
-   listOfBreed1 = [
-     new Breed(1, 'Certain pet 1', 'https://mdbootstrap.com/img/Photos/Others/img3.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-     new Breed(2, 'Certain pet 2', 'https://mdbootstrap.com/img/Photos/Others/img3.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-     new Breed(3, 'Certain pet 3', 'https://mdbootstrap.com/img/Photos/Others/img3.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-     new Breed(4, 'Certain pet 4', 'https://mdbootstrap.com/img/Photos/Others/img3.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-     new Breed(5, 'Certain pet 5', 'https://mdbootstrap.com/img/Photos/Others/img3.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-     new Breed(6, 'Certain pet 6', 'https://mdbootstrap.com/img/Photos/Others/img3.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.')
-   ];
-   this.loggingService.log('List of breeds: ' + listOfBreed1);
-
-   return listOfBreed1;
- }
-  // tslint:disable-next-line:typedef
-  getlistOfBreed2() {
-    let listOfBreed2: Breed[];
-    listOfBreed2 = [
-      new Breed(1, 'Certain pet 1', 'https://mdbootstrap.com/img/Photos/Others/img9.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-      new Breed(2, 'Certain pet 2', 'https://mdbootstrap.com/img/Photos/Others/img9.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-      new Breed(3, 'Certain pet 3', 'https://mdbootstrap.com/img/Photos/Others/img9.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-      new Breed(4, 'Certain pet 4', 'https://mdbootstrap.com/img/Photos/Others/img9.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-      new Breed(5, 'Certain pet 5', 'https://mdbootstrap.com/img/Photos/Others/img9.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-      new Breed(6, 'Certain pet 6', 'https://mdbootstrap.com/img/Photos/Others/img9.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.')
-    ];
-    this.loggingService.log('List of breeds: ' + listOfBreed2);
-
-    return listOfBreed2;
+  getBreeds(): Observable<any> {
+    return this.http.get<Breed[]>(this.apiurl + 'petBreed');
   }
-  // tslint:disable-next-line:typedef
-  getlistOfBreed3() {
-    let listOfBreed3: Breed[];
-    listOfBreed3 = [
-      new Breed(1, 'Certain pet 1', 'https://mdbootstrap.com/img/Photos/Others/img4.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-      new Breed(2, 'Certain pet 2', 'https://mdbootstrap.com/img/Photos/Others/img4.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-      new Breed(3, 'Certain pet 3', 'https://mdbootstrap.com/img/Photos/Others/img4.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-      new Breed(4, 'Certain pet 4', 'https://mdbootstrap.com/img/Photos/Others/img4.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-      new Breed(5, 'Certain pet 5', 'https://mdbootstrap.com/img/Photos/Others/img4.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-      new Breed(6, 'Certain pet 6', 'https://mdbootstrap.com/img/Photos/Others/img4.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.')
-    ];
-    this.loggingService.log('List of breeds: ' + listOfBreed3);
 
-    return listOfBreed3;
+  getListOfBreed1(): Observable<any> {
+    return  this.http.get<Breed[]>(this.apiurl + 'listOfBreed1');
   }
-  // tslint:disable-next-line:typedef
-  getlistOfBreed4() {
-    let listOfBreed4: Breed[];
-    listOfBreed4 = [
-      new Breed(1, 'Certain pet 1', 'https://mdbootstrap.com/img/Photos/Others/img5.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-      new Breed(2, 'Certain pet 2', 'https://mdbootstrap.com/img/Photos/Others/img5.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-      new Breed(3, 'Certain pet 3', 'https://mdbootstrap.com/img/Photos/Others/img5.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-      new Breed(4, 'Certain pet 4', 'https://mdbootstrap.com/img/Photos/Others/img5.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-      new Breed(5, 'Certain pet 5', 'https://mdbootstrap.com/img/Photos/Others/img5.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-      new Breed(6, 'Certain pet 6', 'https://mdbootstrap.com/img/Photos/Others/img5.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.')
-    ];
-    this.loggingService.log('List of breeds: ' + listOfBreed4);
 
-    return listOfBreed4;
+  getListOfBreed2(): Observable<any> {
+    return  this.http.get<Breed[]>(this.apiurl + 'listOfBreed2');
   }
-  // tslint:disable-next-line:typedef
-  getlistOfBreed5() {
-    let listOfBreed5: Breed[];
-    listOfBreed5 = [
-      new Breed(1, 'Certain pet 1', 'https://mdbootstrap.com/img/Photos/Others/img10.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-      new Breed(2, 'Certain pet 2', 'https://mdbootstrap.com/img/Photos/Others/img10.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-      new Breed(3, 'Certain pet 3', 'https://mdbootstrap.com/img/Photos/Others/img10.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-      new Breed(4, 'Certain pet 4', 'https://mdbootstrap.com/img/Photos/Others/img10.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-      new Breed(5, 'Certain pet 5', 'https://mdbootstrap.com/img/Photos/Others/img10.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-      new Breed(6, 'Certain pet 6', 'https://mdbootstrap.com/img/Photos/Others/img10.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.')
-    ];
-    this.loggingService.log('List of breeds: ' + listOfBreed5);
 
-    return listOfBreed5;
+  getListOfBreed3(): Observable<any> {
+    return  this.http.get<Breed[]>(this.apiurl + 'listOfBreed3');
   }
-  // tslint:disable-next-line:typedef
-  getlistOfBreed6() {
-    let listOfBreed6: Breed[];
-    listOfBreed6 = [
-      new Breed(1, 'Certain pet 1', 'https://mdbootstrap.com/img/Photos/Others/img8.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-      new Breed(2, 'Certain pet 2', 'https://mdbootstrap.com/img/Photos/Others/img8.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-      new Breed(3, 'Certain pet 3', 'https://mdbootstrap.com/img/Photos/Others/img8.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-      new Breed(4, 'Certain pet 4', 'https://mdbootstrap.com/img/Photos/Others/img8.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-      new Breed(5, 'Certain pet 5', 'https://mdbootstrap.com/img/Photos/Others/img8.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-      new Breed(6, 'Certain pet 6', 'https://mdbootstrap.com/img/Photos/Others/img8.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.')
-    ];
-    this.loggingService.log('List of breeds: ' + listOfBreed6);
 
-    return listOfBreed6;
- }
+  getListOfBreed4(): Observable<any> {
+    return  this.http.get<Breed[]>(this.apiurl + 'listOfBreed4');
+  }
+
+  getListOfBreed5(): Observable<any> {
+    return  this.http.get<Breed[]>(this.apiurl + 'listOfBreed5');
+  }
+
+  getListOfBreed6(): Observable<any> {
+    return  this.http.get<Breed[]>(this.apiurl + 'listOfBreed6');
+  }
 }
+
+
+
+
+// tslint:disable-next-line:typedef
+// getBreeds(){
+//    let breeds: Breed[];
+//    breeds = [
+//      new Breed(1, 'Breed of pet 1', 'https://mdbootstrap.com/img/Photos/Others/img3.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
+//      new Breed(2, 'Breed of pet 2', 'https://mdbootstrap.com/img/Photos/Others/img9.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
+//      new Breed(3, 'Breed of pet 3', 'https://mdbootstrap.com/img/Photos/Others/img4.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
+//      new Breed(4, 'Breed of pet 4', 'https://mdbootstrap.com/img/Photos/Others/img5.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
+//      new Breed(5, 'Breed of pet 5', 'https://mdbootstrap.com/img/Photos/Others/img10.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
+//      new Breed(6, 'Breed of pet 6', 'https://mdbootstrap.com/img/Photos/Others/img8.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.')
+//    ];
+//
+//    this.loggingService.log('List of breeds: ' + breeds);
+//
+//    return breeds;
+// }

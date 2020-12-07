@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {User} from '../model/user';
+import {AuthService} from '../../services/auth.service';
 
 @Component({
   selector: 'app-basket',
@@ -6,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./basket.component.css']
 })
 export class BasketComponent implements OnInit {
+  user: User;
 
-  constructor() { }
+  constructor(private accountService: AuthService) {
+    this.user = this.accountService.userValue;
+  }
 
   ngOnInit(): void {
   }

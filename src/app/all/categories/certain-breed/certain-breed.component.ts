@@ -8,6 +8,8 @@ import {Breed} from '../../model/breed';
 import {BreedService} from '../../../services/breed.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Subscription} from 'rxjs';
+import {User} from '../../model/user';
+import {AuthService} from '../../../services/auth.service';
 
 // tslint:disable-next-line:no-conflicting-lifecycle
 @Component({
@@ -20,6 +22,7 @@ export class CertainBreedComponent implements OnInit, OnChanges, DoCheck{
   searchText: string;
   num: number;
   private subscription: Subscription;
+  user: User;
   // breedName: string;
 
   listOfBreed1: Breed[];
@@ -29,15 +32,10 @@ export class CertainBreedComponent implements OnInit, OnChanges, DoCheck{
   listOfBreed5: Breed[];
   listOfBreed6: Breed[];
 
-  constructor(private breedService: BreedService, private activateRoute: ActivatedRoute, private router: Router) {
+  constructor(private breedService: BreedService, private activateRoute: ActivatedRoute,
+              private router: Router, private accountService: AuthService) {
     this.subscription = activateRoute.params.subscribe(params => this.num = params['id']);
-
-    this.listOfBreed1 = this.breedService.getlistOfBreed1();
-    this.listOfBreed2 = this.breedService.getlistOfBreed2();
-    this.listOfBreed3 = this.breedService.getlistOfBreed3();
-    this.listOfBreed4 = this.breedService.getlistOfBreed4();
-    this.listOfBreed5 = this.breedService.getlistOfBreed5();
-    this.listOfBreed6 = this.breedService.getlistOfBreed6();
+    this.user = this.accountService.userValue;
   }
 
   // tslint:disable-next-line:typedef
@@ -47,6 +45,12 @@ export class CertainBreedComponent implements OnInit, OnChanges, DoCheck{
   // tslint:disable-next-line:typedef
   ngOnInit() {
     console.log('ChildComponent:OnInit');
+    this.getListOfBreed1();
+    this.getListOfBreed2();
+    this.getListOfBreed3();
+    this.getListOfBreed4();
+    this.getListOfBreed5();
+    this.getListOfBreed6();
     // this.breedService.setShowChild(this.showChild);
   }
   // tslint:disable-next-line:typedef
@@ -58,7 +62,55 @@ export class CertainBreedComponent implements OnInit, OnChanges, DoCheck{
   }
 
   // tslint:disable-next-line:typedef
+  getListOfBreed1() {
+    // console.log(this.user.getRawValue());
+    this.breedService.getListOfBreed1().subscribe(res => {
+      this.listOfBreed1 = res;
+    });
+  }
+
+  // tslint:disable-next-line:typedef
+  getListOfBreed2() {
+    // console.log(this.user.getRawValue());
+    this.breedService.getListOfBreed2().subscribe(res => {
+      this.listOfBreed2 = res;
+    });
+  }
+
+  // tslint:disable-next-line:typedef
+  getListOfBreed3() {
+    // console.log(this.user.getRawValue());
+    this.breedService.getListOfBreed3().subscribe(res => {
+      this.listOfBreed3 = res;
+    });
+  }
+
+  // tslint:disable-next-line:typedef
+  getListOfBreed4() {
+    // console.log(this.user.getRawValue());
+    this.breedService.getListOfBreed4().subscribe(res => {
+      this.listOfBreed4 = res;
+    });
+  }
+
+  // tslint:disable-next-line:typedef
+  getListOfBreed5() {
+    // console.log(this.user.getRawValue());
+    this.breedService.getListOfBreed5().subscribe(res => {
+      this.listOfBreed5 = res;
+    });
+  }
+
+  // tslint:disable-next-line:typedef
+  getListOfBreed6() {
+    // console.log(this.user.getRawValue());
+    this.breedService.getListOfBreed6().subscribe(res => {
+      this.listOfBreed6 = res;
+    });
+  }
+
+  // tslint:disable-next-line:typedef
   redirectToDetail(){
-    this.router.navigate(['pet-details']);
+    this.router.navigate(['../../pet-details']);
   }
 }
