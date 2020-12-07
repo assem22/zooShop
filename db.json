@@ -1,0 +1,282 @@
+{
+  "petBreed": [
+    {
+      "id": 1,
+      "name": "dog1",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img3.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 2,
+      "name": "dog2",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img9.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 3,
+      "name": "dog3",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img4.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 4,
+      "name": "dog4",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img5.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 5,
+      "name": "dog5",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img10.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 6,
+      "name": "dog6",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img8.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    }
+  ],
+  "listOfBreed1": [
+    {
+      "id": 1,
+      "name": "dog1",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img3.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 2,
+      "name": "dog2",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img3.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 3,
+      "name": "dog3",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img3.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 4,
+      "name": "dog4",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img3.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 5,
+      "name": "dog5",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img3.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 6,
+      "name": "dog6",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img3.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    }
+  ],
+  "listOfBreed2": [
+    {
+      "id": 1,
+      "name": "dog1",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img9.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 2,
+      "name": "dog2",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img9.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 3,
+      "name": "dog3",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img9.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 4,
+      "name": "dog4",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img9.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 5,
+      "name": "dog5",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img9.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 6,
+      "name": "dog6",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img9.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    }
+  ],
+  "listOfBreed3": [
+    {
+      "id": 1,
+      "name": "dog1",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img4.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 2,
+      "name": "dog2",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img4.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 3,
+      "name": "dog3",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img4.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 4,
+      "name": "dog4",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img4.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 5,
+      "name": "dog5",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img4.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 6,
+      "name": "dog6",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img4.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    }
+  ],
+  "listOfBreed4": [
+    {
+      "id": 1,
+      "name": "dog1",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img5.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 2,
+      "name": "dog2",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img5.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 3,
+      "name": "dog3",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img5.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 4,
+      "name": "dog4",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img5.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 5,
+      "name": "dog5",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img5.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 6,
+      "name": "dog6",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img5.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    }
+  ],
+  "listOfBreed5": [
+    {
+      "id": 1,
+      "name": "dog1",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img10.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 2,
+      "name": "dog2",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img10.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 3,
+      "name": "dog3",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img10.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 4,
+      "name": "dog4",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img10.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 5,
+      "name": "dog5",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img10.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 6,
+      "name": "dog6",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img10.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    }
+  ],
+  "listOfBreed6": [
+    {
+      "id": 1,
+      "name": "dog1",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img8.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 2,
+      "name": "dog2",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img8.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 3,
+      "name": "dog3",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img8.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 4,
+      "name": "dog4",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img8.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 5,
+      "name": "dog5",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img8.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    },
+    {
+      "id": 6,
+      "name": "dog6",
+      "image": "https://mdbootstrap.com/img/Photos/Others/img8.jpg",
+      "information": "A pet, or companion animal, is an animal kept primarily for a person\\'s company or entertainment rather than as a working animal, livestock or a laboratory animal."
+    }
+  ],
+  "userForm": [
+    {
+      "id": 1,
+      "name": "Assem Mukhamadi",
+      "email": "assem@mail.ru",
+      "password": "qwerty"
+    },
+    {
+      "id": 2,
+      "name": "Gaukhar Mukhamadi",
+      "email": "goha@mail.ru",
+      "password": "qwerty"
+    }
+  ]
+}
