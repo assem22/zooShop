@@ -12,7 +12,7 @@ import {AuthService} from '../../services/auth.service';
 })
 export class OrderComponent implements OnInit, ComponentCanDeactivate {
 
- user: User;
+ user: User  = null;
  saved = false;
 
   constructor(private accountService: AuthService) {

@@ -9,6 +9,8 @@ import {Breed} from '../../model/breed';
 import {BreedService} from '../../../services/breed.service';
 import {AuthService} from '../../../services/auth.service';
 import {User} from '../../model/user';
+import {Subscription} from 'rxjs';
+import {ActivatedRoute} from '@angular/router';
 
 // tslint:disable-next-line:no-conflicting-lifecycle
 @Component({
@@ -20,9 +22,12 @@ import {User} from '../../model/user';
 export class BreedComponent implements OnInit, OnChanges, DoCheck, AfterViewChecked {
   searchText: string;
   listOfBreed: Breed[];
-  user: User;
+  user: User  = null;
+  breedId: number;
+  private subscription: Subscription;
 
-  constructor(private breedService: BreedService, private accountService: AuthService) {
+  constructor(private breedService: BreedService, private activateRoute: ActivatedRoute, private accountService: AuthService) {
+    this.subscription = activateRoute.params.subscribe(params => this.breedId = params['id']);
     this.user = this.accountService.userValue;
   }
 
@@ -33,12 +38,12 @@ export class BreedComponent implements OnInit, OnChanges, DoCheck, AfterViewChec
   // tslint:disable-next-line:typedef
   ngOnInit() {
     console.log('ParentComponent:OnInit');
-    this.getUserList();
+    this.getBreedList(this.breedId);
   }
 
   // tslint:disable-next-line:typedef
-  getUserList() {
-    this.breedService.getBreeds().subscribe(res => {
+  getBreedList(breed: number) {
+    this.breedService.getBreeds(breed).subscribe(res => {
       this.listOfBreed = res;
     });
   }

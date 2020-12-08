@@ -9,7 +9,7 @@ import {map} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthService {
-  private userSubject: BehaviorSubject<User>;
+  private userSubject: BehaviorSubject<User> = null;
   public user: Observable<User>;
 
   apiurl = 'http://localhost:3000/userForm';
@@ -45,7 +45,6 @@ export class AuthService {
 
   // tslint:disable-next-line:typedef
   register(user: User) {
-    // return this.http.post(`${this.apiurl}/register`, user);
     return this.http.post(this.apiurl, user);
   }
 

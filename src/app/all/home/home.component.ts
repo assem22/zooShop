@@ -9,7 +9,7 @@ import {AuthService} from '../../services/auth.service';
 })
 export class HomeComponent implements OnInit {
 
-  user: User;
+  user: User  = null;
 
   constructor(private accountService: AuthService) {
     this.user = this.accountService.userValue;

@@ -18,6 +18,9 @@ import {AuthClass} from './auth.guard';
 import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { HomeNavbarComponent } from './static/home-navbar/home-navbar.component';
+import {BreedService} from './services/breed.service';
+import {LoggingService} from './services/logging.service';
+import {FavoriteListComponent} from './all/favorite-list/favorite-list.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,7 @@ import { HomeNavbarComponent } from './static/home-navbar/home-navbar.component'
     BasketComponent,
     ErrorComponent,
     HomeNavbarComponent,
+    FavoriteListComponent,
   ],
     imports: [
         BrowserModule,
@@ -42,7 +46,9 @@ import { HomeNavbarComponent } from './static/home-navbar/home-navbar.component'
   providers: [
     ExitOrderGuard,
     AuthService,
-    AuthClass],
+    AuthClass,
+    BreedService,
+    LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

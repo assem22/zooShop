@@ -11,18 +11,19 @@ import {ErrorComponent} from './error/error.component';
 import {ExitOrderGuard} from './exit.order.guard';
 import {AuthClass} from './auth.guard';
 import {HomeNavbarComponent} from './static/home-navbar/home-navbar.component';
+import {FavoriteListComponent} from './all/favorite-list/favorite-list.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  // {path: 'pet-details', component: PetDetailComponent},
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'app-home-navbar', component: HomeNavbarComponent},
   {path: 'register', component: RegisterComponent, canDeactivate: [ExitOrderGuard]},
   {path: 'basket', component: BasketComponent, canActivate: [AuthClass]},
+  {path: 'favorites', component: FavoriteListComponent, canActivate: [AuthClass]},
   {path: 'basket/order', component: OrderComponent, canDeactivate: [ExitOrderGuard]},
-  // tslint:disable-next-line:max-line-length
-  {path: 'categories', canActivate: [AuthClass], loadChildren: () => import('./all/categories/categories.module').then(allModule => allModule.CategoriesModule)},
-  {path: 'categories/pet/:id/detail/:id', component: PetDetailComponent},
+  {path: 'categories/:id', canActivate: [AuthClass], loadChildren: () => import('./all/categories/categories.module')
+      .then(allModule => allModule.CategoriesModule)},
   {path: '**', component: ErrorComponent}
 ];
 

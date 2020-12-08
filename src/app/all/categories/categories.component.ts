@@ -20,7 +20,7 @@ export class CategoriesComponent implements OnInit, DoCheck {
   listOfBreed: Breed[];
   pet: Breed;
   searchText: string;
-  user: User;
+  user: User  = null;
 
   constructor(private breedService: BreedService, private accountService: AuthService) {
     this.user = this.accountService.userValue;
@@ -33,14 +33,14 @@ export class CategoriesComponent implements OnInit, DoCheck {
   // tslint:disable-next-line:typedef
   ngOnInit() {
     console.log('CategoryComponent:OnInit');
-    this.getUserList();
+    // this.getUserList();
   }
   // tslint:disable-next-line:typedef
-  getUserList() {
-    this.breedService.getBreeds().subscribe(res => {
-      this.listOfBreed = res;
-    });
-  }
+  // getUserList() {
+  //   this.breedService.getBreeds().subscribe(res => {
+  //     this.listOfBreed = res;
+  //   });
+  // }
   // tslint:disable-next-line:typedef
   ngDoCheck() {
     console.log('CategoryComponent:DoCheck');

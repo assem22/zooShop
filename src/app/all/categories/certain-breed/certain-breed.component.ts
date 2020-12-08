@@ -63,50 +63,44 @@ export class CertainBreedComponent implements OnInit, OnChanges, DoCheck{
 
   // tslint:disable-next-line:typedef
   getListOfBreed1() {
-    // console.log(this.user.getRawValue());
-    this.breedService.getListOfBreed1().subscribe(res => {
-      this.listOfBreed1 = res;
-    });
+    // this.breedService.getListOfBreed1().subscribe(res => {
+    //   this.listOfBreed1 = res;
+    // });
   }
 
   // tslint:disable-next-line:typedef
   getListOfBreed2() {
-    // console.log(this.user.getRawValue());
-    this.breedService.getListOfBreed2().subscribe(res => {
-      this.listOfBreed2 = res;
-    });
+    // this.breedService.getListOfBreed2().subscribe(res => {
+    //   this.listOfBreed2 = res;
+    // });
   }
 
   // tslint:disable-next-line:typedef
   getListOfBreed3() {
-    // console.log(this.user.getRawValue());
-    this.breedService.getListOfBreed3().subscribe(res => {
-      this.listOfBreed3 = res;
-    });
+    // this.breedService.getListOfBreed3().subscribe(res => {
+    //   this.listOfBreed3 = res;
+    // });
   }
 
   // tslint:disable-next-line:typedef
   getListOfBreed4() {
-    // console.log(this.user.getRawValue());
-    this.breedService.getListOfBreed4().subscribe(res => {
-      this.listOfBreed4 = res;
-    });
+    // this.breedService.getListOfBreed4().subscribe(res => {
+    //   this.listOfBreed4 = res;
+    // });
   }
 
   // tslint:disable-next-line:typedef
   getListOfBreed5() {
-    // console.log(this.user.getRawValue());
-    this.breedService.getListOfBreed5().subscribe(res => {
-      this.listOfBreed5 = res;
-    });
+    // this.breedService.getListOfBreed5().subscribe(res => {
+    //   this.listOfBreed5 = res;
+    // });
   }
 
   // tslint:disable-next-line:typedef
   getListOfBreed6() {
-    // console.log(this.user.getRawValue());
-    this.breedService.getListOfBreed6().subscribe(res => {
-      this.listOfBreed6 = res;
-    });
+    // this.breedService.getListOfBreed6().subscribe(res => {
+    //   this.listOfBreed6 = res;
+    // });
   }
 
   // tslint:disable-next-line:typedef

@@ -5,7 +5,7 @@
   <section class="text-center">
 
     <!-- Section heading -->
-    <h3 class="font-weight-bold mb-2">Certain Pet</h3>
+    <h3 class="font-weight-bold mb-2">{{pet.category}}</h3>
     <hr>
 
     <div class="row mt-5">
@@ -17,7 +17,7 @@
           <!--Slides-->
           <div class="carousel-inner text-center text-md-left" role="listbox">
             <div class="carousel-item active pictures">
-              <img src="assets/images/dalmatian1.jpg"
+              <img src="{{pet.image}}"
                    alt="First slide" class="img-fluid mainPictures z-depth-2">
             </div>
             <div class="carousel-item pictures">
@@ -43,74 +43,40 @@
           <!--/.Thumbnails-->
 
         </div>
-        <!--/.Carousel Wrapper-->
-
-<!--        <div class="row mb-4">-->
-<!--          <div class="col-md-12">-->
-<!--            <div id="mdb-lightbox-ui"></div>-->
-<!--            <div class="mdb-lightbox no-margin">-->
-<!--              <figure class="col-md-4">-->
-<!--                <a href="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/1.jpg"-->
-<!--                   data-size="1600x1067">-->
-<!--                  <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/1.jpg"-->
-<!--                       class="img-fluid">-->
-<!--                </a>-->
-<!--              </figure>-->
-<!--              <figure class="col-md-4">-->
-<!--                <a href="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/2.jpg"-->
-<!--                   data-size="1600x1067">-->
-<!--                  <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/2.jpg"-->
-<!--                       class="img-fluid">-->
-<!--                </a>-->
-<!--              </figure>-->
-<!--              <figure class="col-md-4">-->
-<!--                <a href="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/20.jpg"-->
-<!--                   data-size="1600x1067">-->
-<!--                  <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/20.jpg"-->
-<!--                       class="img-fluid">-->
-<!--                </a>-->
-<!--              </figure>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
 
       </div>
 
       <div class="col-lg-5 text-center text-md-left">
 
-        <h2 class="h2-responsive text-center text-md-left product-name font-weight-bold dark-grey-text mb-1 ml-xl-0 ml-4">Dalmatian</h2>
-<!--        <span class="badge badge-danger product mb-4 ml-xl-0 ml-4">bestseller</span>-->
-<!--        <span class="badge badge-success product mb-4 ml-2">SALE</span>-->
+        <h2 class="h2-responsive text-center text-md-left product-name font-weight-bold dark-grey-text mb-1 ml-xl-0 ml-4">
+          {{pet.name}}
+          <a class="btn-floating btn-action ml-auto mr-4 " (click)="changeLike(pet)" style="text-align: right;
+    float: right;">
+            <i class="fas fa-heart" *ngIf="pet.likeStatus"></i><i class="far fa-heart" *ngIf="!pet.likeStatus"></i></a>
+        </h2>
 
         <h3 class="h3-responsive text-center text-md-left mb-5 ml-xl-0 ml-4">
-<!--          <span class="red-text font-weight-bold">-->
-<!--            <strong>$1449</strong>-->
-<!--          </span>-->
           <span class="grey-text">
             <small>
-              <strong>$1789</strong>
+              <strong>${{pet.cost}}</strong>
             </small>
           </span>
         </h3>
 
         <div class="font-weight-normal">
 
-          <p class="ml-xl-0 ml-4">The Dalmatian is a breed of dog bred in Croatia. The name of the breed was given by the historical region of Dalmatia on the Balkan Peninsula.<br>
-            Best known as the star of Disney’s 101 Dalmatians, this sleek and athletic Dalmatian dog breed has a history that goes back several hundred years. They started out as a coach dog but also served in many other capacities, including hunter, firehouse dog, and circus performer.
-          </p>
-
-          <p class="ml-xl-0 ml-4">
-            <strong>Breed: </strong>dalmatian</p>
-          <p class="ml-xl-0 ml-4">
-            <strong>Age: </strong>1 month</p>
-          <p class="ml-xl-0 ml-4">
-            <strong>Color: </strong>Black and white</p>
-
+          <p class="ml-xl-0 ml-4">{{pet.information}}</p>
+<!--          <p class="ml-xl-0 ml-4">-->
+<!--            <strong>Breed: </strong>{{pet.category}}</p>-->
+<!--          <p class="ml-xl-0 ml-4">-->
+<!--            <strong>Age: </strong>1 month</p>-->
+<!--          <p class="ml-xl-0 ml-4">-->
+<!--            <strong>Color: </strong>Black and white</p>-->
           <div style="margin-top: 100px">
             <div class="row mt-5 mb-4">
               <div class="col-md-12 text-center text-md-left text-md-right">
-                <a class="btn btn-primary btn-rounded" routerLink="/basket">
-                  <i class="fas fa-cart-plus mr-2" aria-hidden="true"></i> Add to basket</a>
+                <a class="btn btn-primary btn-rounded" (click)="addToBasket()">
+                  <i class="fas fa-cart-plus mr-2" aria-hidden="true"></i>Add to basket</a>
               </div>
             </div>
           </div>

@@ -1,5 +1,5 @@
 .intro-2 {
-  background: url("src/assets/images/homepage.jpg")no-repeat center center;
+  background: url("../../../assets/images/homepage.jpg")no-repeat center center;
   background-size: cover;
 }
 .card, card-img-top{

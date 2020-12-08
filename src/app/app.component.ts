@@ -10,7 +10,7 @@ import {User} from './all/model/user';
 })
 export class AppComponent {
   title = 'zooStore';
-  user: User;
+  user: User = null;
 
   constructor(private auth: AuthService, private router: Router) {
     this.user = this.auth.userValue;

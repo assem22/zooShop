@@ -18,7 +18,7 @@
           <div class="col-md-4" *ngFor="let breed of listOfBreed | filter: searchText">
             <!-- Card -->
 <!--            {{setClickedBreed(breed.id)}}-->
-            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal" routerLink="pet/{{breed.id}}">
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal" routerLink="detail/{{breed.id}}">
 <!--              <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal" (click)="showCertainBreeds(true, breed.id)" >-->
 
               <!-- Card image -->
@@ -28,7 +28,7 @@
               <div class="card-body">
 
                 <h5 class="my-3">{{breed.name | titlecase}}</h5>
-                <p class="card-text text-uppercase mb-3">some info</p>
+                <p class="card-text text-uppercase mb-3">{{breed.information | summary}}</p>
               </div>
 
             </a>

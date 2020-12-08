@@ -13,7 +13,7 @@ import {User} from '../../model/user';
 })
 export class LoginComponent implements OnInit {
   signInForm: FormGroup;
-  user: User;
+  user: User  = null;
 
   constructor(private service: AuthService, private router: Router, private fb: FormBuilder) { }
 
@@ -35,25 +35,6 @@ export class LoginComponent implements OnInit {
   }
   // tslint:disable-next-line:typedef
   get getter() { return this.signInForm.controls; }
-
-  // someMethod() {
-  //   return this.service.getByEmail(this.email.value).pipe(map(res => {
-  //     console.log('res');
-  //     console.log(res.getPassword);
-  //     return res;
-  //   }));
-  // }
-  //
-  // otherMethod() {
-  //   this.someMethod().subscribe(data => {
-  //     this.user = data;
-  //     console.log('user');
-  //     console.log(this.user);
-  //     if (this.user.getPassword === this.password.value){
-  //       console.log('YES');
-  //     }
-  //   });
-  // }
 
   // tslint:disable-next-line:typedef
   setStatus(){

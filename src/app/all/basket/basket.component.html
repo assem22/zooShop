@@ -17,7 +17,7 @@
             <strong>Pet</strong>
           </th>
           <th class="font-weight-bold">
-            <strong>Color</strong>
+            <strong>Category</strong>
           </th>
           <th></th>
           <th class="font-weight-bold">
@@ -38,70 +38,26 @@
         <tbody>
 
         <!-- First row -->
-        <tr>
+        <tr *ngFor="let pet of pets">
           <th scope="row">
-            <img src="assets/images/dalmatian1.jpg" alt="" class="img-fluid z-depth-0 bpictures">
+            <img src="{{pet.image}}" alt="" class="img-fluid z-depth-0 bpictures">
           </th>
           <td>
             <h5 class="mt-3">
-              <strong>Dalmatian</strong>
+              <strong>{{pet.name}}</strong>
             </h5>
-            <p class="text-muted">Dog</p>
+<!--            <p class="text-muted">{{pet.category}}</p>-->
           </td>
-          <td>White-black</td>
+          <td>{{pet.category}}</td>
           <td></td>
-          <td>$50</td>
+          <td>${{pet.cost}}</td>
           <td class="text-right">
             <button type="button" class="btn btn-sm" data-toggle="tooltip" data-placement="top"
-                    title="Remove item">X
+                    title="Remove item" (click)="delete(pet.id)">X
             </button>
           </td>
         </tr>
         <!-- /.First row -->
-
-        <!-- Second row -->
-        <tr>
-          <th scope="row">
-            <img src="assets/images/cat1.jpg" alt="" class="img-fluid z-depth-0 bpictures">
-          </th>
-          <td>
-            <h5 class="mt-3">
-              <strong>Cat</strong>
-            </h5>
-            <p class="text-muted">Cat</p>
-          </td>
-          <td>Grey</td>
-          <td></td>
-          <td>$50</td>
-          <td class="text-right">
-            <button type="button" class="btn btn-sm" data-toggle="tooltip" data-placement="top"
-                    title="Remove item">X
-            </button>
-          </td>
-        </tr>
-        <!-- /.Second row -->
-
-        <!-- Third row -->
-        <tr>
-          <th scope="row">
-            <img src="assets/images/rodent1.jpg" alt="" class="img-fluid z-depth-0 bpictures">
-          </th>
-          <td>
-            <h5 class="mt-3">
-              <strong>Belka</strong>
-            </h5>
-            <p class="text-muted">Rodent</p>
-          </td>
-          <td>Orange</td>
-          <td></td>
-          <td>$50</td>
-          <td class="text-right">
-            <button type="button" class="btn btn-sm" data-toggle="tooltip" data-placement="top"
-                    title="Remove item">X
-            </button>
-          </td>
-        </tr>
-        <!-- /.Third row -->
 
         <!-- Fourth row -->
         <tr>
@@ -113,7 +69,7 @@
           </td>
           <td class="text-right">
             <h4 class="mt-2">
-              <strong>$150</strong>
+              <strong>${{totalSum}}</strong>
             </h4>
           </td>
           <td colspan="3" class="text-right">

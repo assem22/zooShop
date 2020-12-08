@@ -3,6 +3,7 @@ import {LoggingService} from './logging.service';
 import {Breed} from '../all/model/breed';
 import {Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
+import {User} from '../all/model/user';
 
 @Injectable()
 export class BreedService {
@@ -21,51 +22,37 @@ export class BreedService {
     this.search = searchText;
   }
 
-  getBreeds(): Observable<any> {
-    return this.http.get<Breed[]>(this.apiurl + 'petBreed');
+  getBreeds(breed: number): Observable<any> {
+    return this.http.get<Breed[]>(`${this.apiurl}breed/?breedId=${breed}`);
   }
 
-  getListOfBreed1(): Observable<any> {
-    return  this.http.get<Breed[]>(this.apiurl + 'listOfBreed1');
+  getBreedById(id: number): Observable<Breed>{
+    return this.http.get<Breed>(`${this.apiurl}breed/${id}`);
   }
 
-  getListOfBreed2(): Observable<any> {
-    return  this.http.get<Breed[]>(this.apiurl + 'listOfBreed2');
+  addToBasket(pet: Breed): Observable<any> {
+    return this.http.post<Breed>(`${this.apiurl}basket`, pet);
+  }
+  getBasket(): Observable<any> {
+    return this.http.get<Breed[]>(`${this.apiurl}basket`);
   }
 
-  getListOfBreed3(): Observable<any> {
-    return  this.http.get<Breed[]>(this.apiurl + 'listOfBreed3');
+  delete(id: number): Observable<any> {
+    return this.http.delete(`${this.apiurl}basket/${id}`);
   }
 
-  getListOfBreed4(): Observable<any> {
-    return  this.http.get<Breed[]>(this.apiurl + 'listOfBreed4');
+  addToFavorite(pet: Breed): Observable<any> {
+    return this.http.post<Breed>(`${this.apiurl}favorite`, pet);
+  }
+  getFavorite(): Observable<any> {
+    return this.http.get<Breed[]>(`${this.apiurl}breed/?likeStatus=true`);
   }
 
-  getListOfBreed5(): Observable<any> {
-    return  this.http.get<Breed[]>(this.apiurl + 'listOfBreed5');
-  }
+  // deleteFromFavorite(id: number): Observable<any> {
+  //   return this.http.delete(`${this.apiurl}favorite/${id}`);
+  // }
 
-  getListOfBreed6(): Observable<any> {
-    return  this.http.get<Breed[]>(this.apiurl + 'listOfBreed6');
+  updatePet(pet: Breed): Observable<any> {
+    return this.http.put<any>(this.apiurl + 'breed/' + pet.id , pet);
   }
 }
-
-
-
-
-// tslint:disable-next-line:typedef
-// getBreeds(){
-//    let breeds: Breed[];
-//    breeds = [
-//      new Breed(1, 'Breed of pet 1', 'https://mdbootstrap.com/img/Photos/Others/img3.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-//      new Breed(2, 'Breed of pet 2', 'https://mdbootstrap.com/img/Photos/Others/img9.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-//      new Breed(3, 'Breed of pet 3', 'https://mdbootstrap.com/img/Photos/Others/img4.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-//      new Breed(4, 'Breed of pet 4', 'https://mdbootstrap.com/img/Photos/Others/img5.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-//      new Breed(5, 'Breed of pet 5', 'https://mdbootstrap.com/img/Photos/Others/img10.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.'),
-//      new Breed(6, 'Breed of pet 6', 'https://mdbootstrap.com/img/Photos/Others/img8.jpg', 'A pet, or companion animal, is an animal kept primarily for a person\'s company or entertainment rather than as a working animal, livestock or a laboratory animal.')
-//    ];
-//
-//    this.loggingService.log('List of breeds: ' + breeds);
-//
-//    return breeds;
-// }
