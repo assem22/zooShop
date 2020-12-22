@@ -28,6 +28,7 @@ export class PetDetailComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.num);
     this.getBreedById(this.num);
+    console.log(this.pet.name);
   }
 
   // tslint:disable-next-line:typedef

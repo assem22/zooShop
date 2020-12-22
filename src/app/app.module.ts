@@ -48,7 +48,8 @@ import {FavoriteListComponent} from './all/favorite-list/favorite-list.component
     AuthService,
     AuthClass,
     BreedService,
-    LoggingService],
+    LoggingService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

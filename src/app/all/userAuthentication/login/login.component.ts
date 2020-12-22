@@ -11,6 +11,7 @@ import {User} from '../../model/user';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
   signInForm: FormGroup;
   user: User  = null;

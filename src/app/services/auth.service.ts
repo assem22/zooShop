@@ -4,19 +4,20 @@ import {BehaviorSubject, Observable} from 'rxjs';
 import {User} from '../all/model/user';
 import {Router} from '@angular/router';
 import {map} from 'rxjs/operators';
+import {LoggingService} from './logging.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private userSubject: BehaviorSubject<User> = null;
-  public user: Observable<User>;
+  userSubject: BehaviorSubject<User> = null;
+  user: Observable<User>;
 
   apiurl = 'http://localhost:3000/userForm';
 
   status = false;
 
-  constructor(private router: Router, private http: HttpClient) {
+  constructor(private router: Router, private http: HttpClient, private loggingService: LoggingService) {
     this.userSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('user')));
     this.user = this.userSubject.asObservable();
   }

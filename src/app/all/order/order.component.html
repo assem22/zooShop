@@ -38,8 +38,6 @@
         <div class="col-md-4 mb-4">
 
           <!-- Phone -->
-<!--          <input type="text" id="phone" class="form-control" placeholder="Phone"-->
-<!--                 name="phone" formControlName="phone">-->
           <input [class.is-invalid] = "orderForm.get('phone').invalid && orderForm.get('phone').touched"
                  type="text" class="form-control" formControlName="phone" placeholder="Phone"/>
           <div *ngIf="(phone.invalid && phone.touched) || phone.dirty">
@@ -55,14 +53,29 @@
         <div class="col-md-12 mb-4">
 
           <!-- Subject -->
-<!--          <input type="text" id="subject" class="form-control" placeholder="Address"-->
-<!--                 name="address" formControlName="address">-->
           <input [class.is-invalid] = "orderForm.get('address').invalid && orderForm.get('address').touched"
                  type="text" class="form-control" formControlName="address" placeholder="Address"/>
           <div *ngIf="(address.invalid && address.touched) || address.dirty">
             <small *ngIf="address.errors?.required" class="text-danger">Address is required</small>
           </div>
 
+        </div>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col-md-6 mb-6">
+          <!-- Default checked -->
+          <div class="custom-control custom-checkbox pt-1 pb-2">
+            <input type="checkbox" class="custom-control-input" id="defaultChecked1">
+            <label class="custom-control-label" for="defaultChecked1">Pay by cash</label>
+          </div>
+        </div>
+        <div class="col-md-6 mb-6">
+          <!-- Default checked -->
+          <div class="custom-control custom-checkbox pt-1 pb-2">
+            <input type="checkbox" class="custom-control-input" id="defaultChecked2">
+            <label class="custom-control-label" for="defaultChecked2">Pay by card</label>
+          </div>
         </div>
       </div>
 
@@ -75,7 +88,7 @@
           </div>
 
           <div class="text-center">
-            <button type="submit" class="btn btn-elegant" [disabled]="!orderForm.valid">Submit</button>
+            <button type="submit" class="btn btn-elegant" [disabled]="!orderForm.valid" (click)="order()">Submit</button>
           </div>
 
         </div>

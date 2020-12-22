@@ -4,19 +4,78 @@
       "id": 1,
       "name": "Assem Mukhamadi",
       "email": "assem@mail.ru",
-      "password": "qwerty"
+      "password": "qwerty",
+      "favList": [],
+      "basket": [
+        {
+          "id": 4,
+          "breedId": 3,
+          "likeStatus": true,
+          "category": "Dog",
+          "cost": 1000,
+          "name": "Dalmatian",
+          "image": "https://petsi.net/images/dogphotos/bench-dalmatians.jpg",
+          "image2": "https://i.pinimg.com/originals/34/b2/e2/34b2e2f979e72527d5911ad2c05e6407.jpg",
+          "image3": "https://i.pinimg.com/736x/fa/01/89/fa0189f6bb6a01ed0f00c76bf42cab1c.jpg",
+          "information": "The Dalmatian dog breed is a lean, but strong and muscular animal with an aesthetic and well-proportioned physique. The muzzle is elongated, the ears are folded. The limbs are slightly longer than the average, the chest is pronounced, as is the abdominal cavity. The coat is short, soft, thick and shiny. Color white with a black spot."
+        },
+        {
+          "id": 11,
+          "breedId": 1,
+          "likeStatus": true,
+          "category": "Bird",
+          "cost": 1000,
+          "name": "Macaw parrot",
+          "image": "https://opt-1031816.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/2be/750_400_1/2bee838cea13918b583998999ccc9148.png?1528247933532750",
+          "image2": "https://lafeber.com/pet-birds/wp-content/uploads/2018/06/Scarlet-Macaw-2.jpg",
+          "image3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRlaRMWPIexfhexxN_z8e_JJOd_GxqPzJaiw&usqp=CAU",
+          "information": "Macaws are very large, colorful, exotic parrots, whose body length can reach 98 cm (hyacinth macaw). One of the main features of these birds is the almost complete absence of plumage on the sides of the head and the area around the eyes. Otherwise, the plumage of the macaw is very dense, it shimmers beautifully in various shades (blue, red, green) and has a wide range of colors. The plumage color of young macaws is almost identical to that of adults, and the color of males and females is also similar."
+        },
+        {
+          "id": 6,
+          "breedId": 3,
+          "likeStatus": true,
+          "category": "Dog",
+          "cost": 1000,
+          "name": "Alaskan Malamute",
+          "image": "https://petsi.net/images/dogphotos/walking-alaskan-malamute.jpg",
+          "image2": "https://i.pinimg.com/originals/78/ec/38/78ec3834d6ac4466462eb9556f5a8009.jpg",
+          "image3": "https://i.pinimg.com/736x/15/e4/ec/15e4ec9aa23d806b5911efc5fb5f195a.jpg",
+          "information": "The Alaskan Malamute dog breed resembles large wolves, has a large build, a wide, powerful chest, medium-length limbs, muscular and very strong. Tail, fluffy saber-shaped. These animals are generally characterized by great strength and endurance, which is evident in their every movement. The head is large, the ears are erect, and the nape of the neck stands out clearly. The coat is long."
+        }
+      ]
     },
     {
       "id": 2,
-      "name": "Gaukhar Mukhamadi",
-      "email": "goha@mail.ru",
-      "password": "qwerty"
+      "name": "Albina",
+      "email": "albina@mail.ru",
+      "password": "qwerty",
+      "favList": [],
+      "basket": []
     },
     {
       "name": "Dana",
       "email": "dana@mail.ru",
       "password": "qwerty123",
-      "id": 3
+      "id": 3,
+      "favList": [],
+      "basket": []
+    },
+    {
+      "name": "Assem",
+      "email": "admin@mail.ru",
+      "password": "qwerty123",
+      "id": 4,
+      "favList": [],
+      "basket": []
+    },
+    {
+      "name": "Dana",
+      "email": "dana@gmail.ru",
+      "password": "qwerty123",
+      "id": 5,
+      "favList": [],
+      "basket": []
     }
   ],
   "breed": [
@@ -35,7 +94,7 @@
     {
       "id": 2,
       "breedId": 2,
-      "likeStatus": true,
+      "likeStatus": false,
       "category": "Cat",
       "cost": 1000,
       "name": "Ojos azules. Blue eyes",
@@ -47,7 +106,7 @@
     {
       "id": 3,
       "breedId": 2,
-      "likeStatus": true,
+      "likeStatus": false,
       "category": "Cat",
       "cost": 1000,
       "name": "Bengal cat",
@@ -83,7 +142,7 @@
     {
       "id": 6,
       "breedId": 3,
-      "likeStatus": false,
+      "likeStatus": true,
       "category": "Dog",
       "cost": 1000,
       "name": "Alaskan Malamute",
@@ -143,7 +202,7 @@
     {
       "id": 11,
       "breedId": 1,
-      "likeStatus": false,
+      "likeStatus": true,
       "category": "Bird",
       "cost": 1000,
       "name": "Macaw parrot",
@@ -239,28 +298,40 @@
   ],
   "basket": [
     {
-      "id": 2,
-      "breedId": 2,
+      "id": 4,
+      "breedId": 3,
       "likeStatus": true,
-      "category": "Cat",
+      "category": "Dog",
       "cost": 1000,
-      "name": "Ojos azules. Blue eyes",
-      "image": "https://bosch-club.ru/upload/resize_cache/iblock/3cf/300_300_1/3cf0e3770d4b533aa5cc0778e9d3e3f2.jpg",
-      "image2": "https://hvost.news/upload/resize_cache/iblock/1df/750_400_1/goluboglazka.jpg",
-      "image3": "https://loveanimal.ru/_bl/1/04916625.jpg",
-      "information": "Ojos azules from the Spanish phrase \"Ojos azules\" means \"blue eyes\". It is this feature of the Ojos azules cats that has become the main factor in the development of this new breed. These cats do not have Siamese cats in their pedigree, and the blue color was a natural mutation that gave the azure eye color to these cats. In addition to this typical, it is for Siamese cats, the color of the eye, cats of the Ojos azules breed are no longer remarkable. Characteristics of the breed's appearance: triangular head shape, bright protruding cheekbones, developed but not protruding chin form a medium-sized muzzle. The transition from the nose to the forehead has a small concavity."
+      "name": "Dalmatian",
+      "image": "https://petsi.net/images/dogphotos/bench-dalmatians.jpg",
+      "image2": "https://i.pinimg.com/originals/34/b2/e2/34b2e2f979e72527d5911ad2c05e6407.jpg",
+      "image3": "https://i.pinimg.com/736x/fa/01/89/fa0189f6bb6a01ed0f00c76bf42cab1c.jpg",
+      "information": "The Dalmatian dog breed is a lean, but strong and muscular animal with an aesthetic and well-proportioned physique. The muzzle is elongated, the ears are folded. The limbs are slightly longer than the average, the chest is pronounced, as is the abdominal cavity. The coat is short, soft, thick and shiny. Color white with a black spot."
     },
     {
-      "id": 9,
-      "breedId": 4,
-      "likeStatus": false,
-      "category": "Fish",
+      "id": 11,
+      "breedId": 1,
+      "likeStatus": true,
+      "category": "Bird",
       "cost": 1000,
-      "name": "Nymph",
-      "image": "https://www.aqvium.ru/images/fish-new/goldfish/06.fantail-goldfish/06-3.fantail-goldfish.jpg",
-      "image2": "https://i.pinimg.com/originals/16/e0/89/16e089f47a0bcb6e7fd391db099f5e07.jpg",
-      "image3": "https://149366112.v2.pressablecdn.com/wp-content/uploads/2020/07/veiltail-11455_1920.jpg",
-      "information": "Nymph (Fantail Goldfish-English), as well as its Japanese counterpart Ryukin (Ryukin) are decorative species that are specially bred to participate in various specialized exhibitions. The main feature is a large caudal fin. The most perfect forms have a fully forked tail, which looks like a triangle when viewed from above. The anal fin is similarly divided. Those specimens whose fins are not completely separated or have asymmetrical parts are destined to become a simple pet, they will not be able to win any award. The most common variety with a reddish-orange color, but there are also spotted, mother-of-pearl and even white."
+      "name": "Macaw parrot",
+      "image": "https://opt-1031816.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/2be/750_400_1/2bee838cea13918b583998999ccc9148.png?1528247933532750",
+      "image2": "https://lafeber.com/pet-birds/wp-content/uploads/2018/06/Scarlet-Macaw-2.jpg",
+      "image3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRlaRMWPIexfhexxN_z8e_JJOd_GxqPzJaiw&usqp=CAU",
+      "information": "Macaws are very large, colorful, exotic parrots, whose body length can reach 98 cm (hyacinth macaw). One of the main features of these birds is the almost complete absence of plumage on the sides of the head and the area around the eyes. Otherwise, the plumage of the macaw is very dense, it shimmers beautifully in various shades (blue, red, green) and has a wide range of colors. The plumage color of young macaws is almost identical to that of adults, and the color of males and females is also similar."
+    },
+    {
+      "id": 6,
+      "breedId": 3,
+      "likeStatus": true,
+      "category": "Dog",
+      "cost": 1000,
+      "name": "Alaskan Malamute",
+      "image": "https://petsi.net/images/dogphotos/walking-alaskan-malamute.jpg",
+      "image2": "https://i.pinimg.com/originals/78/ec/38/78ec3834d6ac4466462eb9556f5a8009.jpg",
+      "image3": "https://i.pinimg.com/736x/15/e4/ec/15e4ec9aa23d806b5911efc5fb5f195a.jpg",
+      "information": "The Alaskan Malamute dog breed resembles large wolves, has a large build, a wide, powerful chest, medium-length limbs, muscular and very strong. Tail, fluffy saber-shaped. These animals are generally characterized by great strength and endurance, which is evident in their every movement. The head is large, the ears are erect, and the nape of the neck stands out clearly. The coat is long."
     }
   ]
 }

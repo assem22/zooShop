@@ -11,7 +11,7 @@ import {BreedService} from '../../services/breed.service';
 })
 export class BasketComponent implements OnInit {
   user: User = null;
-  pets: Breed[];
+  pets: Breed[] = null;
   totalSum = 0;
 
   constructor(private accountService: AuthService, private breedService: BreedService) {
@@ -19,7 +19,11 @@ export class BasketComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getBreedList();
+    console.log(this.user.name);
+    this.pets = this.user.basket;
+    console.log(this.pets);
+    console.log(this.user.basket);
+    // this.getBreedList();
   }
 
   // tslint:disable-next-line:typedef

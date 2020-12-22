@@ -60,4 +60,7 @@ export class OrderComponent implements OnInit, ComponentCanDeactivate {
     }
   }
 
+  order(): any {
+    alert('Order successfully accepted! Please, wait.');
+  }
 }
