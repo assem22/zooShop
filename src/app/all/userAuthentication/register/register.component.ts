@@ -22,6 +22,7 @@ export class RegisterComponent implements OnInit, ComponentCanDeactivate {
     name: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required,
       Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]),
+    role: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required,
       Validators.pattern('(?=.*[a-zA-Z])(?=.*[0-9])[A-Za-z].{8,}')]),
     repeatPassword: new FormControl('', [Validators.required])
@@ -31,6 +32,7 @@ export class RegisterComponent implements OnInit, ComponentCanDeactivate {
 
   createUser(): any {
     this.getUserList();
+
     this.service.register(new User(this.id, this.signUpForm.getRawValue().name,
       this.signUpForm.getRawValue().email, this.signUpForm.getRawValue().password) )
       .pipe(first())

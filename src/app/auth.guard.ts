@@ -8,27 +8,27 @@ export class AuthClass implements CanActivate{
   }
 
   // tslint:disable-next-line:typedef
-  // canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-  //   const user = this.auth.userValue;
-  //   if (user) {
-  //     // authorised so return true
-  //     return true;
-  //   }
-  //
-  //   // not logged in so redirect to login page with the return url
-  //   this.router.navigate(['login'], { queryParams: { returnUrl: state.url }});
-  //   return false;
-  // }
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+    const user = this.auth.userValue[0];
+    if (user) {
+      // authorised so return true
+      return true;
+    }
+
+    // not logged in so redirect to login page with the return url
+    this.router.navigate(['login']);
+    return false;
+  }
 
   // tslint:disable-next-line:typedef
-  canActivate() {
-    console.log('authGuard');
-    if (this.auth.isLoggedIn()){
-      return true;
-    }else{
-      this.router.navigate(['login']);
-      // window.alert('First login');
-      return false;
-    }
-  }
+  // canActivate() {
+  //   console.log('authGuard');
+  //   if (this.auth.isLoggedIn()){
+  //     return true;
+  //   }else{
+  //     this.router.navigate(['login']);
+  //     // window.alert('First login');
+  //     return false;
+  //   }
+  // }
 }

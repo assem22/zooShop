@@ -5,6 +5,7 @@ import {User} from '../all/model/user';
 import {Router} from '@angular/router';
 import {map} from 'rxjs/operators';
 import {LoggingService} from './logging.service';
+import {HomeComponent} from '../all/home/home.component';
 
 @Injectable({
   providedIn: 'root'
@@ -45,7 +46,7 @@ export class AuthService implements OnDestroy{
     localStorage.removeItem('user');
     this.userSubject.next(null);
     window.alert('You just logged out');
-    this.router.navigate(['']);
+    this.router.navigate(['home']);
   }
 
   // tslint:disable-next-line:typedef

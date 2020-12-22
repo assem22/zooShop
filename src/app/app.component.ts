@@ -10,10 +10,10 @@ import {User} from './all/model/user';
 })
 export class AppComponent {
   title = 'zooStore';
-  user: User = null;
+  user: User;
 
   constructor(private auth: AuthService, private router: Router) {
-    this.user = this.auth.userValue[0];
+    this.user = this.auth.userValue;
   }
 
   // tslint:disable-next-line:typedef

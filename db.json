@@ -7,28 +7,16 @@
       "password": "qwerty",
       "favList": [
         {
-          "id": 1,
-          "breedId": 2,
+          "id": 6,
+          "breedId": 3,
           "likeStatus": true,
-          "category": "Cat",
+          "category": "Dog",
           "cost": 1000,
-          "name": "British Shorthair",
-          "image": "https://bosch-club.ru/upload/iblock/f36/f36cc496802e10056b9bee7fa6114464.jpg",
-          "image2": "https://opt-1031816.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/1ba/750_400_1/1baf9fffdacdf759cdcd257cac376e2c.jpg?152824228799443",
-          "image3": "https://i.pinimg.com/originals/ab/b6/38/abb638f484c42120705d98a6e24541b4.jpg",
-          "information": "Modern British Shorthair cats are well-built animals of medium to large size with a powerful body, stocky legs and strong rounded paws. The weight of an adult animal ranges from 3 to 7 kg, cats are larger than cats. The round head is crowned with wide - set ears of medium size. A muzzle with full cheeks and large round wide eyes will not leave anyone indifferent. The coat of these cats is short, dense, shiny, with a well-developed undercoat. It doesn't fit the body, which makes it look plush. The most popular color among fans of the breed is blue. However, thanks to breeding work, today the breed has about 200 different colors: plain (black, blue, chocolate, purple, red, cream, white), tortoiseshell, typed (smoky, shaded, chinchilla), tabby (marbled, mackerel, spotted), color-point, bicolor. As a rule, the British have bright orange eyes, but depending on the color it can be blue, blue, green."
-        },
-        {
-          "id": 9,
-          "breedId": 4,
-          "likeStatus": true,
-          "category": "Fish",
-          "cost": 1000,
-          "name": "Nymph",
-          "image": "https://www.aqvium.ru/images/fish-new/goldfish/06.fantail-goldfish/06-3.fantail-goldfish.jpg",
-          "image2": "https://i.pinimg.com/originals/16/e0/89/16e089f47a0bcb6e7fd391db099f5e07.jpg",
-          "image3": "https://149366112.v2.pressablecdn.com/wp-content/uploads/2020/07/veiltail-11455_1920.jpg",
-          "information": "Nymph (Fantail Goldfish-English), as well as its Japanese counterpart Ryukin (Ryukin) are decorative species that are specially bred to participate in various specialized exhibitions. The main feature is a large caudal fin. The most perfect forms have a fully forked tail, which looks like a triangle when viewed from above. The anal fin is similarly divided. Those specimens whose fins are not completely separated or have asymmetrical parts are destined to become a simple pet, they will not be able to win any award. The most common variety with a reddish-orange color, but there are also spotted, mother-of-pearl and even white."
+          "name": "Alaskan Malamute",
+          "image": "https://petsi.net/images/dogphotos/walking-alaskan-malamute.jpg",
+          "image2": "https://i.pinimg.com/originals/78/ec/38/78ec3834d6ac4466462eb9556f5a8009.jpg",
+          "image3": "https://i.pinimg.com/736x/15/e4/ec/15e4ec9aa23d806b5911efc5fb5f195a.jpg",
+          "information": "The Alaskan Malamute dog breed resembles large wolves, has a large build, a wide, powerful chest, medium-length limbs, muscular and very strong. Tail, fluffy saber-shaped. These animals are generally characterized by great strength and endurance, which is evident in their every movement. The head is large, the ears are erect, and the nape of the neck stands out clearly. The coat is long."
         }
       ],
       "basket": [
@@ -62,6 +50,7 @@
       "id": 2,
       "name": "Albina",
       "email": "albina@mail.ru",
+      "role": "Role.User",
       "password": "qwerty",
       "favList": [
         {
@@ -77,16 +66,16 @@
           "information": "A fairly large rodent with a body length of up to 18 cm, with soft fur of sandy or Golden color. They live for 2-3 years. By nature, Syrian hamsters are solitary, and it is better to keep them one at a time, because even a different-sex couple will inevitably fight."
         },
         {
-          "id": 3,
-          "breedId": 2,
+          "id": 5,
+          "breedId": 3,
           "likeStatus": true,
-          "category": "Cat",
+          "category": "Dog",
           "cost": 1000,
-          "name": "Bengal cat",
-          "image": "https://bosch-club.ru/upload/iblock/b61/b61e3b0cacb013c53757b7bc701d3e93.jpg",
-          "image2": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Paintedcats_Red_Star_standing.jpg",
-          "image3": "https://d17fnq9dkz9hgj.cloudfront.net/breed-uploads/2018/08/bengal-detail.jpg?bust=1535566919&width=355",
-          "information": "Powerful and elongated body with well-developed muscles, strong bones, medium-length paws. The head is proportional to the body with well-developed jaws. The ears are quite short with a wide base and are located as wide as possible. The eyes are round, bright and expressive."
+          "name": "Akita Inu",
+          "image": "https://petsi.net/images/dogbreed/big/20.jpg",
+          "image2": "https://i.pinimg.com/originals/5c/1b/45/5c1b45cbba5d97a0ace110828761d893.jpg",
+          "image3": "https://i.pinimg.com/originals/4c/33/50/4c33503e82da86fdff492023f07079f4.jpg",
+          "information": "The Japanese Akita inu is a large dog with a powerful build, large muscles and a round head. Ears are erect. The limbs are muscular, of medium length, and the tail is sabre-shaped and bushy. The coat is long."
         }
       ],
       "basket": [
@@ -101,12 +90,25 @@
           "image2": "https://i.pinimg.com/originals/5c/1b/45/5c1b45cbba5d97a0ace110828761d893.jpg",
           "image3": "https://i.pinimg.com/originals/4c/33/50/4c33503e82da86fdff492023f07079f4.jpg",
           "information": "The Japanese Akita inu is a large dog with a powerful build, large muscles and a round head. Ears are erect. The limbs are muscular, of medium length, and the tail is sabre-shaped and bushy. The coat is long."
+        },
+        {
+          "id": 16,
+          "category": "Rodent",
+          "likeStatus": true,
+          "cost": 1000,
+          "breedId": 6,
+          "name": "Syrian hamster",
+          "image": "https://www.hvoost.ru/upload/medialibrary/4c7/4c79a78867836c6e3be2214e183a30db.jpg",
+          "image2": "https://lh3.googleusercontent.com/proxy/MONUAVQmRrjC9qKjvwE1yT_JQt3Bei4NM5T05MZG-92mwMIuvLZfoV8ZCRiHWsng4nhJhOqcuPix7r0UFjYHusyerNPgEQ2Q8Vhsxg9DgveeDA",
+          "image3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYa-GFZgp_cA-h1Y-jiV7fP4j0vGp44SzX3A&usqp=CAU",
+          "information": "A fairly large rodent with a body length of up to 18 cm, with soft fur of sandy or Golden color. They live for 2-3 years. By nature, Syrian hamsters are solitary, and it is better to keep them one at a time, because even a different-sex couple will inevitably fight."
         }
       ]
     },
     {
       "name": "Dana",
       "email": "dana@mail.ru",
+      "role": "Role.User",
       "password": "qwerty123",
       "id": 3,
       "favList": [],
@@ -115,33 +117,68 @@
     {
       "name": "Assem",
       "email": "admin@mail.ru",
+      "role": "Role.Admin",
       "password": "qwerty123",
       "id": 4,
-      "favList": [],
-      "basket": []
-    },
-    {
-      "name": "Dana",
-      "email": "dana@gmail.ru",
-      "password": "qwerty123",
-      "id": 5,
-      "favList": [],
-      "basket": []
-    },
-    {
-      "name": "test",
-      "email": "test@mail.ru",
-      "password": "test12345",
-      "favList": [],
-      "basket": [],
-      "id": 6
+      "favList": [
+        {
+          "id": 1,
+          "breedId": 2,
+          "likeStatus": true,
+          "category": "Cat",
+          "cost": 1000,
+          "name": "British Shorthair",
+          "image": "https://bosch-club.ru/upload/iblock/f36/f36cc496802e10056b9bee7fa6114464.jpg",
+          "image2": "https://opt-1031816.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/1ba/750_400_1/1baf9fffdacdf759cdcd257cac376e2c.jpg?152824228799443",
+          "image3": "https://i.pinimg.com/originals/ab/b6/38/abb638f484c42120705d98a6e24541b4.jpg",
+          "information": "Modern British Shorthair cats are well-built animals of medium to large size with a powerful body, stocky legs and strong rounded paws. The weight of an adult animal ranges from 3 to 7 kg, cats are larger than cats. The round head is crowned with wide - set ears of medium size. A muzzle with full cheeks and large round wide eyes will not leave anyone indifferent. The coat of these cats is short, dense, shiny, with a well-developed undercoat. It doesn't fit the body, which makes it look plush. The most popular color among fans of the breed is blue. However, thanks to breeding work, today the breed has about 200 different colors: plain (black, blue, chocolate, purple, red, cream, white), tortoiseshell, typed (smoky, shaded, chinchilla), tabby (marbled, mackerel, spotted), color-point, bicolor. As a rule, the British have bright orange eyes, but depending on the color it can be blue, blue, green."
+        },
+        {
+          "id": 17,
+          "breedId": 6,
+          "likeStatus": true,
+          "category": "Rodent",
+          "cost": 1000,
+          "name": "Gerbils",
+          "image": "https://www.hvoost.ru/upload/medialibrary/8d4/8d4011ded5b92edf01049b5e3b969e81.jpeg",
+          "image2": "https://cdn.shopify.com/s/files/1/0037/0268/5745/articles/home-yourpets-gerbil_1200x630.jpg?v=1563991840",
+          "image3": "https://assets.petco.com/petco/image/upload/f_auto,q_auto/gerbil-1",
+          "information": "Most often, the Mongolian gerbil is kept as a pet. These are miniature animals from 9 to 15 centimeters long, with a lowered tail and a brush at its end. They live on average 2-3 years.  The gerbil is fed a grain mixture, adding sprouted grass, dried and fresh vegetables. You can sometimes give a feed insect or low-fat cottage cheese. The only thing - should be limited to give fatty and oily products. Gerbils love them very much, but an overabundance can negatively affect the pet's health. For grinding teeth, mineral stone (which, in addition, replenishes the mineral-salt balance in the body) and branches of deciduous trees will be useful."
+        }
+      ],
+      "basket": [
+        {
+          "id": 5,
+          "breedId": 3,
+          "likeStatus": false,
+          "category": "Dog",
+          "cost": 1000,
+          "name": "Akita Inu",
+          "image": "https://petsi.net/images/dogbreed/big/20.jpg",
+          "image2": "https://i.pinimg.com/originals/5c/1b/45/5c1b45cbba5d97a0ace110828761d893.jpg",
+          "image3": "https://i.pinimg.com/originals/4c/33/50/4c33503e82da86fdff492023f07079f4.jpg",
+          "information": "The Japanese Akita inu is a large dog with a powerful build, large muscles and a round head. Ears are erect. The limbs are muscular, of medium length, and the tail is sabre-shaped and bushy. The coat is long."
+        },
+        {
+          "id": 3,
+          "breedId": 2,
+          "likeStatus": false,
+          "category": "Cat",
+          "cost": 1000,
+          "name": "Bengal cat",
+          "image": "https://bosch-club.ru/upload/iblock/b61/b61e3b0cacb013c53757b7bc701d3e93.jpg",
+          "image2": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Paintedcats_Red_Star_standing.jpg",
+          "image3": "https://d17fnq9dkz9hgj.cloudfront.net/breed-uploads/2018/08/bengal-detail.jpg?bust=1535566919&width=355",
+          "information": "Powerful and elongated body with well-developed muscles, strong bones, medium-length paws. The head is proportional to the body with well-developed jaws. The ears are quite short with a wide base and are located as wide as possible. The eyes are round, bright and expressive."
+        }
+      ]
     }
   ],
   "breed": [
     {
       "id": 1,
       "breedId": 2,
-      "likeStatus": true,
+      "likeStatus": false,
       "category": "Cat",
       "cost": 1000,
       "name": "British Shorthair",
@@ -165,7 +202,7 @@
     {
       "id": 3,
       "breedId": 2,
-      "likeStatus": true,
+      "likeStatus": false,
       "category": "Cat",
       "cost": 1000,
       "name": "Bengal cat",
@@ -201,7 +238,7 @@
     {
       "id": 6,
       "breedId": 3,
-      "likeStatus": false,
+      "likeStatus": true,
       "category": "Dog",
       "cost": 1000,
       "name": "Alaskan Malamute",
@@ -333,7 +370,7 @@
     {
       "id": 17,
       "breedId": 6,
-      "likeStatus": false,
+      "likeStatus": true,
       "category": "Rodent",
       "cost": 1000,
       "name": "Gerbils",

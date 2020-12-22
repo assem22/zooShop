@@ -11,7 +11,6 @@ const routes: Routes = [
     path: '', component: CategoriesComponent,
     children: [
       {path: '', component: BreedComponent},
-      // {path: 'pet/:id', component: CertainBreedComponent},
     ]
   },
   {path: 'detail/:id', component: PetDetailComponent}
