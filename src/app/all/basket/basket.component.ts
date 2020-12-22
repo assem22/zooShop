@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {User} from '../model/user';
 import {AuthService} from '../../services/auth.service';
 import {Breed} from '../model/breed';
-import {BreedService} from '../../services/breed.service';
 
 @Component({
   selector: 'app-basket',
@@ -10,41 +9,31 @@ import {BreedService} from '../../services/breed.service';
   styleUrls: ['./basket.component.css']
 })
 export class BasketComponent implements OnInit {
-  user: User = null;
-  pets: Breed[] = null;
+  user: User;
   totalSum = 0;
 
-  constructor(private accountService: AuthService, private breedService: BreedService) {
-    this.user = this.accountService.userValue;
+  constructor(private accountService: AuthService) {
+    this.user = this.accountService.userValue[0];
   }
 
   ngOnInit(): void {
-    console.log(this.user.name);
-    this.pets = this.user.basket;
-    console.log(this.pets);
-    console.log(this.user.basket);
-    // this.getBreedList();
-  }
-
-  // tslint:disable-next-line:typedef
-  getBreedList() {
-    this.breedService.getBasket().subscribe(res => {
-      this.pets = res;
-      this.calculateTotalCost();
-    });
+    this.calculateTotalCost();
   }
 
   calculateTotalCost(): any{
     this.totalSum = 0;
     // tslint:disable-next-line:prefer-for-of
-    for (let i = 0; i < this.pets.length; i++){
-      this.totalSum += this.pets[i].cost;
+    for (let i = 0; i < this.user.basket.length; i++){
+      this.totalSum += this.user.basket[i].cost;
+      console.log(this.user.basket[i].cost);
     }
   }
 
-  delete(id: number): any {
-    this.breedService.delete(id).subscribe(data => {
-      this.getBreedList();
-    });
+  delete(pet: Breed): any {
+    // tslint:disable-next-line:prefer-for-of
+    this.user.basket = this.user.basket.filter(item => item !== pet);
+    this.accountService.update(this.user).subscribe(data => console.log(data), error => console.log(error));
+    console.log(this.user);
+    this.calculateTotalCost();
   }
 }

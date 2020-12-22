@@ -20,10 +20,10 @@ export class CategoriesComponent implements OnInit, DoCheck {
   listOfBreed: Breed[];
   pet: Breed;
   searchText: string;
-  user: User  = null;
+  user: User;
 
   constructor(private breedService: BreedService, private accountService: AuthService) {
-    this.user = this.accountService.userValue;
+    this.user = this.accountService.userValue[0];
   }
 
   // ngOnChanges() {

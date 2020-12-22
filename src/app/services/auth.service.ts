@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable, OnDestroy} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {BehaviorSubject, Observable} from 'rxjs';
 import {User} from '../all/model/user';
@@ -9,19 +9,23 @@ import {LoggingService} from './logging.service';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
-  userSubject: BehaviorSubject<User> = null;
-  user: Observable<User>;
+export class AuthService implements OnDestroy{
+  private userSubject: BehaviorSubject<User>;
+  public user: Observable<User>;
 
   apiurl = 'http://localhost:3000/userForm';
 
   status = false;
 
-  constructor(private router: Router, private http: HttpClient, private loggingService: LoggingService) {
+  constructor(private router: Router, private http: HttpClient) {
     this.userSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('user')));
     this.user = this.userSubject.asObservable();
   }
 
+  // tslint:disable-next-line:typedef
+  ngOnDestroy(){
+    localStorage.clear();
+  }
   public get userValue(): User {
     return this.userSubject.value;
   }
@@ -59,7 +63,7 @@ export class AuthService {
   }
 
   create(user): Observable<any> {
-    return this.http.post<any>(this.apiurl, user);
+    return this.http.post<User>(this.apiurl, user);
   }
 
   get(): Observable<any> {
@@ -85,7 +89,19 @@ export class AuthService {
   }
 
   update(user): Observable<any> {
-    return this.http.put<any>(this.apiurl + '/' + user.id , user);
+    return this.http.put<any>(this.apiurl + '/' + user.id , user)
+      .pipe(map(x => {
+        // update stored user if the logged in user updated their own record
+        if (user.id === this.userValue.id) {
+          // update local storage
+          const constUser = { ...this.userValue, ...user };
+          localStorage.setItem('user', JSON.stringify(constUser));
+
+          // publish updated user to subscribers
+          this.userSubject.next(constUser);
+        }
+        return x;
+      }));
   }
 
   delete(id: number): Observable<any> {

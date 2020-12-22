@@ -7,9 +7,17 @@ export class AuthClass implements CanActivate{
   constructor(private auth: AuthService, private router: Router) {
   }
 
-  // canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean | UrlTree> {
-  //   // @ts-ignore
-  //   return this.auth.isLoggedIn();
+  // tslint:disable-next-line:typedef
+  // canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+  //   const user = this.auth.userValue;
+  //   if (user) {
+  //     // authorised so return true
+  //     return true;
+  //   }
+  //
+  //   // not logged in so redirect to login page with the return url
+  //   this.router.navigate(['login'], { queryParams: { returnUrl: state.url }});
+  //   return false;
   // }
 
   // tslint:disable-next-line:typedef

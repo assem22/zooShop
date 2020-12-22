@@ -15,7 +15,7 @@ import {User} from '../../model/user';
 export class RegisterComponent implements OnInit, ComponentCanDeactivate {
 
   saved = false;
-  users: any;
+  users: User[] = [];
   id: number;
 
   signUpForm = new FormGroup({
@@ -63,6 +63,8 @@ export class RegisterComponent implements OnInit, ComponentCanDeactivate {
     this.service.get().subscribe(res => {
       this.id = res.length + 1;
       this.users = res;
+      console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
+      console.log(typeof this.users);
     });
   }
 

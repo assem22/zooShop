@@ -50,7 +50,7 @@
 
         <h2 class="h2-responsive text-center text-md-left product-name font-weight-bold dark-grey-text mb-1 ml-xl-0 ml-4">
           {{pet.name}}
-          <a class="btn-floating btn-action ml-auto mr-4 " (click)="changeLike(pet)" style="text-align: right;
+          <a class="btn-floating btn-action ml-auto mr-4 " (click)="changeLike()" style="text-align: right;
     float: right;">
             <i class="fas fa-heart" *ngIf="pet.likeStatus"></i><i class="far fa-heart" *ngIf="!pet.likeStatus"></i></a>
         </h2>

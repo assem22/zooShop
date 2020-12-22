@@ -28,7 +28,7 @@ export class BreedComponent implements OnInit, OnChanges, DoCheck, AfterViewChec
 
   constructor(private breedService: BreedService, private activateRoute: ActivatedRoute, private accountService: AuthService) {
     this.subscription = activateRoute.params.subscribe(params => this.breedId = params['id']);
-    this.user = this.accountService.userValue;
+    this.user = this.accountService.userValue[0];
   }
 
   // tslint:disable-next-line:typedef

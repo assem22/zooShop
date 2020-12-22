@@ -13,7 +13,7 @@ export class AppComponent {
   user: User = null;
 
   constructor(private auth: AuthService, private router: Router) {
-    this.user = this.auth.userValue;
+    this.user = this.auth.userValue[0];
   }
 
   // tslint:disable-next-line:typedef

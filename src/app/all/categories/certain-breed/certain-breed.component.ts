@@ -35,7 +35,7 @@ export class CertainBreedComponent implements OnInit, OnChanges, DoCheck{
   constructor(private breedService: BreedService, private activateRoute: ActivatedRoute,
               private router: Router, private accountService: AuthService) {
     this.subscription = activateRoute.params.subscribe(params => this.num = params['id']);
-    this.user = this.accountService.userValue;
+    // this.user = this.accountService.userValue;
   }
 
   // tslint:disable-next-line:typedef

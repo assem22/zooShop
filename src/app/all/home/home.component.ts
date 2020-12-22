@@ -9,10 +9,10 @@ import {AuthService} from '../../services/auth.service';
 })
 export class HomeComponent implements OnInit {
 
-  user: User  = null;
+  user: User;
 
   constructor(private accountService: AuthService) {
-    this.user = this.accountService.userValue;
+    this.user = this.accountService.userValue[0];
   }
 
   ngOnInit(): void {

@@ -16,7 +16,7 @@ export class OrderComponent implements OnInit, ComponentCanDeactivate {
  saved = false;
 
   constructor(private accountService: AuthService) {
-    this.user = this.accountService.userValue;
+    this.user = this.accountService.userValue[0];
   }
 
   orderForm = new FormGroup({
