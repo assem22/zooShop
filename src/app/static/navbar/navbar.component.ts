@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from '../../services/auth.service';
 import {Router} from '@angular/router';
+import {User} from '../../all/model/user';
 
 
 @Component({
@@ -10,8 +11,11 @@ import {Router} from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
   dateObj: number = Date.now();
+  user: User;
 
-  constructor(private service: AuthService, private router: Router) { }
+  constructor(private accountService: AuthService, private router: Router) {
+    this.user = this.accountService.userValue[0];
+  }
 
   ngOnInit(): void {
   }
@@ -19,9 +23,6 @@ export class NavbarComponent implements OnInit {
   // tslint:disable-next-line:typedef
   logOut() {
     console.log('Log out');
-    this.service.logout();
-    this.service.setStatus();
-    // window.alert('You just logged out');
-    // this.router.navigate(['']);
+    this.accountService.logout();
   }
 }

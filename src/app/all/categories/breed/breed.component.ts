@@ -50,6 +50,7 @@ export class BreedComponent implements OnInit, OnChanges, DoCheck, AfterViewChec
   // tslint:disable-next-line:typedef
   ngDoCheck() {
     console.log('ParentComponent:DoCheck');
+    console.log(this.breedId);
     this.searchText = this.breedService.getSearchText();
   }
 

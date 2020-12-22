@@ -12,6 +12,7 @@ export class AuthClass implements CanActivate{
     const user = this.auth.userValue[0];
     if (user) {
       // authorised so return true
+      this.auth.setStatus();
       return true;
     }
 

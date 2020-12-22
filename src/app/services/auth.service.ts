@@ -45,8 +45,9 @@ export class AuthService implements OnDestroy{
     // remove user from local storage and set current user to null
     localStorage.removeItem('user');
     this.userSubject.next(null);
+    this.status = false;
     window.alert('You just logged out');
-    this.router.navigate(['home']);
+    this.router.navigate(['login']);
   }
 
   // tslint:disable-next-line:typedef
@@ -60,7 +61,7 @@ export class AuthService implements OnDestroy{
 
   // tslint:disable-next-line:typedef
   setStatus(){
-    this.status = !this.status;
+    this.status = true;
   }
 
   create(user): Observable<any> {

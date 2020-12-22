@@ -21,6 +21,7 @@ import { HomeNavbarComponent } from './static/home-navbar/home-navbar.component'
 import {BreedService} from './services/breed.service';
 import {LoggingService} from './services/logging.service';
 import {FavoriteListComponent} from './all/favorite-list/favorite-list.component';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import {FavoriteListComponent} from './all/favorite-list/favorite-list.component
         BrowserModule,
         AppRoutingModule,
         ReactiveFormsModule,
-        HttpClientModule
+        HttpClientModule,
+        RouterModule
     ],
   providers: [
     ExitOrderGuard,

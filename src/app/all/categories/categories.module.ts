@@ -6,6 +6,7 @@ import { BreedComponent } from './breed/breed.component';
 import {Ng2SearchPipeModule} from 'ng2-search-filter';
 import {FormsModule} from '@angular/forms';
 import {SummaryPipe} from '../../summary.pipe';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [CategoriesComponent, BreedComponent, SummaryPipe],
@@ -14,6 +15,7 @@ import {SummaryPipe} from '../../summary.pipe';
     CategoriesRoutingModule,
     Ng2SearchPipeModule,
     FormsModule,
+    RouterModule
   ]
 })
 export class CategoriesModule { }

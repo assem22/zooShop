@@ -1,6 +1,6 @@
 <!--Navbar -->
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
-  <a class="navbar-brand" href="#">ZooShop</a>
+  <a class="navbar-brand" routerLink="/home" routerLinkActive="active">ZooShop</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
           aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -8,25 +8,21 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="home">Home
+        <a class="nav-link" [routerLink]="'home'">Home
           <span class="sr-only">(current)</span>
         </a>
       </li>
-      <!--      <li class="nav-item">-->
-      <!--        <a class="nav-link" routerLink="basket">Basket-->
-      <!--        </a>-->
-      <!--      </li>-->
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
            aria-haspopup="true" aria-expanded="false">Categories
         </a>
         <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-          <a class="dropdown-item" routerLink="/categories">Cats</a>
-          <a class="dropdown-item" routerLink="/categories">Dogs</a>
-          <a class="dropdown-item" routerLink="/categories">Rodents</a>
-          <a class="dropdown-item" routerLink="/categories">Reptiles</a>
-          <a class="dropdown-item" routerLink="/categories">Birds</a>
-          <a class="dropdown-item" routerLink="/categories">Pisces</a>
+          <a class="dropdown-item" routerLink="/categories/2">Cats</a>
+          <a class="dropdown-item" routerLink="/categories/3">Dogs</a>
+          <a class="dropdown-item" routerLink="/categories/6">Rodents</a>
+          <a class="dropdown-item" routerLink="/categories/5">Reptiles</a>
+          <a class="dropdown-item" routerLink="/categories/1">Birds</a>
+          <a class="dropdown-item" routerLink="/categories/4">Fish</a>
         </div>
       </li>
     </ul>
@@ -43,9 +39,8 @@
         </a>
         <div class="dropdown-menu dropdown-menu-right dropdown-default"
              aria-labelledby="navbarDropdownMenuLink-3333">
-          <a class="dropdown-item" routerLink="login">Sign in</a>
-          <a class="dropdown-item" href="register">Sign up</a>
-          <!--          <a class="dropdown-item" href="#">liked</a>-->
+          <a class="dropdown-item" href="login">Sign in</a>
+          <a class="dropdown-item" routerLink="register">Sign up</a>
         </div>
       </li>
     </ul>

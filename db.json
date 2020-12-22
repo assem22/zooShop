@@ -43,6 +43,18 @@
           "image2": "https://opt-1031816.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/1ba/750_400_1/1baf9fffdacdf759cdcd257cac376e2c.jpg?152824228799443",
           "image3": "https://i.pinimg.com/originals/ab/b6/38/abb638f484c42120705d98a6e24541b4.jpg",
           "information": "Modern British Shorthair cats are well-built animals of medium to large size with a powerful body, stocky legs and strong rounded paws. The weight of an adult animal ranges from 3 to 7 kg, cats are larger than cats. The round head is crowned with wide - set ears of medium size. A muzzle with full cheeks and large round wide eyes will not leave anyone indifferent. The coat of these cats is short, dense, shiny, with a well-developed undercoat. It doesn't fit the body, which makes it look plush. The most popular color among fans of the breed is blue. However, thanks to breeding work, today the breed has about 200 different colors: plain (black, blue, chocolate, purple, red, cream, white), tortoiseshell, typed (smoky, shaded, chinchilla), tabby (marbled, mackerel, spotted), color-point, bicolor. As a rule, the British have bright orange eyes, but depending on the color it can be blue, blue, green."
+        },
+        {
+          "id": 5,
+          "breedId": 3,
+          "likeStatus": false,
+          "category": "Dog",
+          "cost": 1000,
+          "name": "Akita Inu",
+          "image": "https://petsi.net/images/dogbreed/big/20.jpg",
+          "image2": "https://i.pinimg.com/originals/5c/1b/45/5c1b45cbba5d97a0ace110828761d893.jpg",
+          "image3": "https://i.pinimg.com/originals/4c/33/50/4c33503e82da86fdff492023f07079f4.jpg",
+          "information": "The Japanese Akita inu is a large dog with a powerful build, large muscles and a round head. Ears are erect. The limbs are muscular, of medium length, and the tail is sabre-shaped and bushy. The coat is long."
         }
       ]
     },
@@ -122,18 +134,6 @@
       "id": 4,
       "favList": [
         {
-          "id": 1,
-          "breedId": 2,
-          "likeStatus": true,
-          "category": "Cat",
-          "cost": 1000,
-          "name": "British Shorthair",
-          "image": "https://bosch-club.ru/upload/iblock/f36/f36cc496802e10056b9bee7fa6114464.jpg",
-          "image2": "https://opt-1031816.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/1ba/750_400_1/1baf9fffdacdf759cdcd257cac376e2c.jpg?152824228799443",
-          "image3": "https://i.pinimg.com/originals/ab/b6/38/abb638f484c42120705d98a6e24541b4.jpg",
-          "information": "Modern British Shorthair cats are well-built animals of medium to large size with a powerful body, stocky legs and strong rounded paws. The weight of an adult animal ranges from 3 to 7 kg, cats are larger than cats. The round head is crowned with wide - set ears of medium size. A muzzle with full cheeks and large round wide eyes will not leave anyone indifferent. The coat of these cats is short, dense, shiny, with a well-developed undercoat. It doesn't fit the body, which makes it look plush. The most popular color among fans of the breed is blue. However, thanks to breeding work, today the breed has about 200 different colors: plain (black, blue, chocolate, purple, red, cream, white), tortoiseshell, typed (smoky, shaded, chinchilla), tabby (marbled, mackerel, spotted), color-point, bicolor. As a rule, the British have bright orange eyes, but depending on the color it can be blue, blue, green."
-        },
-        {
           "id": 17,
           "breedId": 6,
           "likeStatus": true,
@@ -144,6 +144,18 @@
           "image2": "https://cdn.shopify.com/s/files/1/0037/0268/5745/articles/home-yourpets-gerbil_1200x630.jpg?v=1563991840",
           "image3": "https://assets.petco.com/petco/image/upload/f_auto,q_auto/gerbil-1",
           "information": "Most often, the Mongolian gerbil is kept as a pet. These are miniature animals from 9 to 15 centimeters long, with a lowered tail and a brush at its end. They live on average 2-3 years.  The gerbil is fed a grain mixture, adding sprouted grass, dried and fresh vegetables. You can sometimes give a feed insect or low-fat cottage cheese. The only thing - should be limited to give fatty and oily products. Gerbils love them very much, but an overabundance can negatively affect the pet's health. For grinding teeth, mineral stone (which, in addition, replenishes the mineral-salt balance in the body) and branches of deciduous trees will be useful."
+        },
+        {
+          "id": 5,
+          "breedId": 3,
+          "likeStatus": true,
+          "category": "Dog",
+          "cost": 1000,
+          "name": "Akita Inu",
+          "image": "https://petsi.net/images/dogbreed/big/20.jpg",
+          "image2": "https://i.pinimg.com/originals/5c/1b/45/5c1b45cbba5d97a0ace110828761d893.jpg",
+          "image3": "https://i.pinimg.com/originals/4c/33/50/4c33503e82da86fdff492023f07079f4.jpg",
+          "information": "The Japanese Akita inu is a large dog with a powerful build, large muscles and a round head. Ears are erect. The limbs are muscular, of medium length, and the tail is sabre-shaped and bushy. The coat is long."
         }
       ],
       "basket": [
@@ -202,7 +214,7 @@
     {
       "id": 3,
       "breedId": 2,
-      "likeStatus": false,
+      "likeStatus": true,
       "category": "Cat",
       "cost": 1000,
       "name": "Bengal cat",
@@ -226,7 +238,7 @@
     {
       "id": 5,
       "breedId": 3,
-      "likeStatus": false,
+      "likeStatus": true,
       "category": "Dog",
       "cost": 1000,
       "name": "Akita Inu",
@@ -322,7 +334,7 @@
     {
       "id": 13,
       "breedId": 5,
-      "likeStatus": false,
+      "likeStatus": true,
       "category": "Reptile",
       "cost": 1000,
       "name": "Chameleon",
@@ -350,8 +362,8 @@
       "category": "Reptile",
       "cost": 1000,
       "name": "Lizard",
-      "image": "https://catfishes.ru/wp-content/uploads/2020/02/yashcer1.jpg",
-      "image2": "https://i.pinimg.com/originals/52/be/8a/52be8a1e79b85f7648c2c09b0cf1ff23.jpg",
+      "image": "https://i.pinimg.com/originals/52/be/8a/52be8a1e79b85f7648c2c09b0cf1ff23.jpg",
+      "image2": "https://catfishes.ru/wp-content/uploads/2020/02/yashcer1.jpg",
       "image3": "https://i.pinimg.com/originals/af/fa/ed/affaeddd5f02af729c89e2fae7c1ae56.jpg",
       "information": "Home place of lizards-a terrarium. You can only let it out on the floor for a short time – to avoid hypothermia. For this reason, the height is made at least two heights, about the same width and twice the length. For well-climbing vertical species, the vertical size is increased or provided by mesh (non-traumatic) fences. Good ventilation should be provided in the side walls."
     },
