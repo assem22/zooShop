@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {CategoriesComponent} from './categories.component';
-import {CertainBreedComponent} from './certain-breed/certain-breed.component';
 import {BreedComponent} from './breed/breed.component';
 import {PetDetailComponent} from '../pet-detail/pet-detail.component';
 
